@@ -1,0 +1,29 @@
+/* src/styles.css */
+
+/* 词云容器的样式 */
+.word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 居中对齐 */
+    position: relative;
+    width: 100%; /* 调整为 100% 宽度，确保不会影响页面布局 */
+    max-width: 600px; /* 最大宽度，避免占用太多空间 */
+    height: 50vh; /* 设置更适合的高度 */
+    margin-top: 5%;
+    margin-left: auto; /* 居中 */
+    margin-right: auto; /* 居中 */
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+/* 每个词的基本样式 */
+.word {
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute; /* 让每个词可以自由漂浮 */
+    transition: transform 0.3s, color 0.3s; /* 平滑的动画效果 */
+}
+
+.word.hovered {
+    color: #407EC9; /* 悬浮时的颜色 */
+    transform: scale(1.5); /* 悬浮时放大 */
+}

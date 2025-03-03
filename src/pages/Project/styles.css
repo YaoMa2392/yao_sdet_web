@@ -1,0 +1,102 @@
+.container {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(180deg, #407EC9 0%, #1D3557 100%);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Core Features Section */
+.core-features-section {
+    padding: 50px 20px;
+    background: #1D3557;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.core-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.core-feature-card {
+    background-color: #407EC9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.core-feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.core-feature-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.core-feature-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.core-feature-description {
+    font-size: 1rem;
+    color: #d1d5db;
+}
+
+/* 内容部分 */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    color: #d1d5db;
+}
+
+/* 滚动渐入动画 */
+.fade-section {
+    margin-bottom: 50px;
+}
