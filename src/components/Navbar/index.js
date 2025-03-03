@@ -13,7 +13,25 @@ const Navbar = () => {
             </div>
             <div className="navbar-links">
                 <Link to="/">About Me</Link>
-                <Link to="/Project">Project</Link>
+                {/*<Link to="/Project">Project</Link>*/}
+
+                {/* 分级菜单：Project */}
+                <div
+                    className="dropdown"
+                    onMouseEnter={() => setTestMenuOpen(true)}
+                    onMouseLeave={() => setTestMenuOpen(false)}
+                >
+                    <Link to="/Project" className="dropdown-title">Project</Link>
+                    {testMenuOpen && (
+                        <div className="dropdown-menu">
+                            {/*<Link to="/test/workflow">Workflow</Link>*/}
+                            <Link to="/Project/Sales">Sales</Link>
+                            <Link to="/Project/Payment">Payment</Link>
+                            <Link to="/Project/Inventory">Inventory</Link>
+                            <Link to="/Project/Analytics">Analytics</Link>
+                        </div>
+                    )}
+                </div>
 
                 {/* 分级菜单：Test */}
                 <div

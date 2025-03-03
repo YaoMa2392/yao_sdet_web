@@ -45,10 +45,9 @@ export default function Workflow() {
                     transition={{ duration: 1 }}
                     className="workflow-hero-title"
                 >
-
                     Workflow
                 </motion.h1>
-                <WorkflowDiagram />
+                <WorkflowDiagram/>
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -7,6 +7,8 @@ import Project from "./pages/Project/Project";
 // import Challenges from "./pages/Challenges/Challenges";
 import Regression from "./pages/Test/Regression/Regression";
 import Workflow from "./pages/Test/Workflow/Workflow";
+import Sales from "./pages/Project/Sales/Sales";
+import Payment from "./pages/Project/Payment/Payment";
 
 const routes = [
     {
@@ -16,6 +18,14 @@ const routes = [
     {
         path: "/Project",
         element: <Project />,
+    },
+    {
+        path: "/Project/Sales",
+        element: <Sales />,
+    },
+    {
+        path: "/Project/Payment",
+        element: <Payment />,
     },
     // {
     //     path: "/Challenges",

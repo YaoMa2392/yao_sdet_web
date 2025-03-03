@@ -35,7 +35,7 @@
 
     display: inline-block;
     padding: 10px 20px;
-    z-index: 10; /* 确保文字在前面 */
+    z-index: 1; /* 确保文字在前面 */
 
     /*border: 2px solid red; !* 添加红色边框 *!*/
 }
