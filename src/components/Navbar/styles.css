@@ -13,11 +13,11 @@
     margin-left: 10%;
 }
 
-
 .navbar-links {
     display: flex;
     gap: 20px;
     margin-right: 10%;
+    position: relative;
 }
 
 .navbar-links a {
@@ -33,5 +33,49 @@
 
 .navbar-links a:hover {
     color: #407EC9;
+}
+
+/* Dropdown 样式 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-title {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    padding: 10px 0;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    color: #333;
     text-decoration: none;
+    font-size: 0.9em;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+    color: #407EC9;
 }

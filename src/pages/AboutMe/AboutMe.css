@@ -1,8 +1,9 @@
 .about-me-container{
     font-family: Arial, sans-serif;
-    color: white;
-    background: linear-gradient(180deg, #407EC9 0%, #1D3557 100%);
+    color: #407EC9;
+    /*background: linear-gradient(180deg, #407EC9 0%, #1D3557 100%);*/
     min-height: 100vh;
+    /*border: 2px solid red; !* 添加红色边框 *!*/
 }
 /* 为了保持宽度一致，使用与 ProjectIntro 相同的布局 */
 .page-content {
@@ -13,7 +14,7 @@
 }
 
 /* Hero Section */
-.hero-section {
+.aboutme-hero-section {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,14 +22,19 @@
     align-items: center;
     text-align: center;
     position: relative;
+    /*border: 2px solid red; !* 添加红色边框 *!*/
 }
 
 /* 标题样式 */
-.hero-title {
-    font-size: 4rem;
-    font-weight: bold;
-    z-index: 2;
+.aboutme-hero-title {
+    font-size: 6em;
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    color: #407EC9;
+    /*transform: translate(-50%, -50%);*/
 }
+
 
 /* WordCloud 样式 */
 .hero-section > .word-cloud {
@@ -54,9 +60,9 @@
     margin-bottom: 10px;
 }
 
-.section-text {
+.aboutme-section-text {
     font-size: 1.2rem;
-    color: #d1d5db;
+    color: #407EC9;
 }
 
 /* 滚动渐入动画 */

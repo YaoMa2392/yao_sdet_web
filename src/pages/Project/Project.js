@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import "./styles.css";
-import target1 from "../../assets/Uptrillion_target1.png";
-import target2 from "../../assets/Uptrillion_target2.png";
+import "./Project.css";
+import web from "../../assets/uptrillion_web.jpg";
+import mobile from "../../assets/uptrillion_mobile.jpg";
+import cloud from "../../assets/uptrillion_cloud.png";
+import {useState} from "react";
 
 const FadeInSection = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -18,8 +20,22 @@ const FadeInSection = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function Project() {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    // 处理鼠标位置的变化
+    const handleMouseMove = (e) => {
+        const { clientX: x, clientY: y } = e;
+        setMousePosition({ x, y });
+    };
+
+    // 设置图片的样式和动画效果
+    const imageStyle = {
+        transform: `translate(${(mousePosition.x - window.innerWidth / 2) / 30}px, ${(mousePosition.y - window.innerHeight / 2) / 30}px)`,
+        transition: 'transform 0.1s ease-out', // 添加平滑效果
+    };
+
     return (
-        <div className="container">
+        <div className="container" onMouseMove={handleMouseMove}>
             {/* Hero Section */}
             <section className="hero-section">
                 <motion.h1
@@ -28,6 +44,7 @@ export default function Project() {
                     transition={{ duration: 1 }}
                     className="hero-title"
                 >
+
                     Uptrillion
                 </motion.h1>
                 <motion.p
@@ -38,7 +55,40 @@ export default function Project() {
                 >
                     The Cloud Commerce Platform
                 </motion.p>
+                <motion.img
+                    src={cloud} // 使用图片文件名
+                    alt="Cloud Icon"
+                    className="cloud-icon"
+                    style={imageStyle}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                />
             </section>
+
+
+
+            {/* Project Details */}
+            <section className="content-section">
+                <FadeInSection>
+                    <h2 className="section-title center-title">About Uptrillion</h2>
+                    <p className="project-section-text">
+                        Uptrillion, a subsidiary of PAX Technology, Inc., offers an integrated cloud solution for mobile point of sale (mPOS) applications, catering to businesses across various platforms. Their flagship product, the Hummingbird Payment Solution, enables Android devices to process contactless transactions with major card networks, including Visa, MasterCard, American Express, and Discover, without requiring PINs or signatures.
+                        VISA PARTNER. This solution is compatible with Android 10 and above, ensuring a seamless payment experience for businesses on the go.
+                    </p>
+                </FadeInSection>
+
+                {/* 图片展示部分 */}
+                <div className="image-container">
+                    <div className="image-box">
+                        <img src={web} alt="Project screenshot 1" className="project-image" />
+                    </div>
+                    <div className="image-box">
+                        <img src={mobile} alt="Project screenshot 2" className="project-image" />
+                    </div>
+                </div>
+            </section>
+
 
             {/* Core Features Section */}
             <section className="core-features-section">
@@ -107,30 +157,6 @@ export default function Project() {
                         </p>
                     </motion.div>
                 </div>
-            </section>
-
-            {/* Project Details */}
-            <section className="content-section">
-                <FadeInSection>
-                    <h2 className="section-title">🛠 Project Background</h2>
-                    <p className="section-text">
-                        This project aims to improve UI automation test coverage and optimize the CI/CD pipeline to ensure software reliability.
-                    </p>
-                </FadeInSection>
-
-                <FadeInSection>
-                    <h2 className="section-title">🔍 Key Challenges</h2>
-                    <p className="section-text">
-                        Handling dynamic elements, API response variations, and integrating automation into an existing development workflow.
-                    </p>
-                </FadeInSection>
-
-                <FadeInSection>
-                    <h2 className="section-title">🚀 Solutions</h2>
-                    <p className="section-text">
-                        We implemented Cypress for end-to-end testing, integrated GitHub Actions for automation, and developed a robust reporting system.
-                    </p>
-                </FadeInSection>
             </section>
         </div>
     );

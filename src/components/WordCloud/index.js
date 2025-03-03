@@ -57,11 +57,13 @@ const WordCloud = () => {
     const getWordPosition = (index) => {
         const { x, y } = mousePosition;
         const offsetX = Math.sin(index) * 400;
-        const offsetY = Math.cos(index) * 280;
+        let offsetY = Math.cos(index) * 320;
+
         return {
             transform: `translate(${x / 50 + offsetX}px, ${y / 50 + offsetY + 100}px)`
         };
     };
+
 
     return (
         <div className="word-cloud" ref={wordCloudRef}>

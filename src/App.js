@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProjectPurpose from "./pages/Project";
-import { NotFound } from "./pages/NotFound";
+import { NotFound } from "./pages/NotFound/NotFound";
 import Navbar from "./components/Navbar";
-import AboutMe from "./pages/AboutMe";
-import Introduction from "./pages/Introduction";
+import AboutMe from "./pages/AboutMe/AboutMe";
+import Project from "./pages/Project/Project";
+// import Challenges from "./pages/Challenges/Challenges";
+import Regression from "./pages/Test/Regression/Regression";
 
 const routes = [
     {
@@ -13,7 +14,16 @@ const routes = [
     },
     {
         path: "/Project",
-        element: <ProjectPurpose />,
+        element: <Project />,
+    },
+    // {
+    //     path: "/Challenges",
+    //     element: <Challenges />,
+    // },
+
+    {
+        path: "/Test/Regression",
+        element: <Regression />,
     },
     {
         path: "*", // Catch-all route for not found

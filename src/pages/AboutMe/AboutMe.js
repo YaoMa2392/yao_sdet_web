@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import WordCloud from "../../components/WordCloud";
-import "./styles.css";
+import "./AboutMe.css";
 
 const FadeInSection = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -22,12 +22,12 @@ const AboutMe = () => {
         <div className="about-me-container">
             <div className="page-content">
                 {/* Hero Section with Word Cloud */}
-                <section className="hero-section">
+                <section className="aboutme-hero-section">
                     <motion.h1
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="hero-title"
+                        className="aboutme-hero-title"
                     >
                         Yao Ma
                     </motion.h1>
@@ -82,7 +82,7 @@ const AboutMe = () => {
 
                     <FadeInSection>
                         <h2 className="section-title">🚀 Work Experience</h2>
-                        <p className="section-text">Description for Module 3.</p>
+                        <p className="aboutme-section-text">Description for Module 3.</p>
                     </FadeInSection>
 
                     <FadeInSection>
