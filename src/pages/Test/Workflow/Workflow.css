@@ -1,7 +1,7 @@
-.container {
+.workflow-container {
     font-family: Arial, sans-serif;
     color: white;
-    background: linear-gradient(180deg, #407EC9 0%, #1D3557 100%);
+    /*background: linear-gradient(180deg, #407EC9 0%, #1D3557 100%);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,7 +9,7 @@
 }
 
 /* Hero Section */
-.hero-section {
+.workflow-hero-section {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,14 +17,42 @@
     align-items: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(135deg, #407EC9, #1D3557); /* Gradient Background */
+    /*background: linear-gradient(135deg, #407EC9, #1D3557); !* Gradient Background *!*/
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+
 }
 
 
-.hero-title {
+.workflow-hero-title {
     font-size: 4rem;
-    font-weight: bold;
-    color: white;
+    font-weight: lighter;
+    font-family: inherit;
+    color: #1C3775;
+
+    position: absolute; /* 绝对定位 */
+    top: 8%; /* 距离顶部的距离 */
+    left: 10px; /* 距离左侧10px */
+
+    display: inline-block;
+    padding: 10px 20px;
+    z-index: 10; /* 确保文字在前面 */
+
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+.workflow-hero-title::before {
+    content: "";
+    position: absolute;
+    top: 56%;
+    left: -20px; /* 让背景条从页面最左侧开始 */
+    width: calc(100vw + 20px); /* 让背景条覆盖整个屏幕，并补偿 left -10px 的偏移 */
+    height: 3em; /* 控制背景条的高度 */
+    background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%); /* 左右深，中间稍微透明的渐变 */
+    transform: translateY(-50%); /* 让背景条垂直居中 */
+    z-index: -1; /* 让背景条在文字后面 */
+    border-radius: 5px; /* 可选：增加圆角 */
+        /*border: 2px solid red; !* 添加红色边框 *!*/
+
 }
 
 .cloud-icon {
@@ -33,7 +61,7 @@
     margin-right: 10px; /* 调整文字和图标之间的间距 */
 }
 
-.hero-subtitle {
+.workflow-hero-subtitle {
     font-size: 1.5rem;
     max-width: 600px;
     margin-top: 10px;

@@ -24,7 +24,7 @@ const Navbar = () => {
                     <Link to="/Test" className="dropdown-title">Test</Link>
                     {testMenuOpen && (
                         <div className="dropdown-menu">
-                            <Link to="/test/workflow">Workflow</Link>
+                            {/*<Link to="/test/workflow">Workflow</Link>*/}
                             <Link to="/test/design">Design Test</Link>
                             <Link to="/test/functional">Functional Testing</Link>
                             <Link to="/Test/Regression">Regression Testing</Link>
