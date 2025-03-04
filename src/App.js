@@ -12,6 +12,7 @@ import Payment from "./pages/Project/Payment/Payment";
 import Inventory from "./pages/Project/Inventory/Inventory";
 import Analytics from "./pages/Project/Analytics/Analytics";
 import Functionality from "./pages/Test/Functionality/Functionality";
+import CICD from "./pages/Test/CICD/CICD";
 
 const routes = [
     {
@@ -54,6 +55,10 @@ const routes = [
     {
         path: "/Test/Functionality",
         element: <Functionality />,
+    },
+    {
+        path: "/Test/CICD",
+        element: <CICD />,
     },
     {
         path: "*", // Catch-all route for not found
