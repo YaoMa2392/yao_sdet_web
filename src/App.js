@@ -9,6 +9,8 @@ import Regression from "./pages/Test/Regression/Regression";
 import Workflow from "./pages/Test/Workflow/Workflow";
 import Sales from "./pages/Project/Sales/Sales";
 import Payment from "./pages/Project/Payment/Payment";
+import Inventory from "./pages/Project/Inventory/Inventory";
+import Analytics from "./pages/Project/Analytics/Analytics";
 
 const routes = [
     {
@@ -26,6 +28,14 @@ const routes = [
     {
         path: "/Project/Payment",
         element: <Payment />,
+    },
+    {
+        path: "/Project/Inventory",
+        element: <Inventory />,
+    },
+    {
+        path: "/Project/Analytics",
+        element: <Analytics />,
     },
     // {
     //     path: "/Challenges",

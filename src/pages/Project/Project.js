@@ -153,7 +153,7 @@ export default function Project() {
                             scale: 1.1, // 放大效果
                             transition: {type: "spring", stiffness: 300}
                         }}
-                        onClick={() => window.location.href = "/inventory"} // 点击跳转到Inventory页面
+                        onClick={() => window.location.href = "/Project/Inventory"} // 点击跳转到Inventory页面
                     >
                         <div className="core-feature-icon">📦</div>
                         <h3 className="feature-title">Inventory Management</h3>
@@ -172,7 +172,7 @@ export default function Project() {
                             scale: 1.1, // 放大效果
                             transition: {type: "spring", stiffness: 300}
                         }}
-                        onClick={() => window.location.href = "/reporting"} // 点击跳转到Reporting页面
+                        onClick={() => window.location.href = "/Project/Analytics"} // 点击跳转到Reporting页面
                     >
                         <div className="core-feature-icon">📊</div>
                         <h3 className="feature-title">Reporting & Analytics</h3>

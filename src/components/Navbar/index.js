@@ -43,12 +43,12 @@ const Navbar = () => {
                     {testMenuOpen && (
                         <div className="dropdown-menu">
                             {/*<Link to="/test/workflow">Workflow</Link>*/}
-                            <Link to="/test/design">Design Test</Link>
-                            <Link to="/test/functional">Functional Testing</Link>
+                            <Link to="/Test/Design">Design Test</Link>
+                            <Link to="/Test/Functional">Functional Testing</Link>
                             <Link to="/Test/Regression">Regression Testing</Link>
-                            <Link to="/test/performance">Performance Testing</Link>
-                            <Link to="/test/ci-cd">CI/CD</Link>
-                            <Link to="/test/documentation">Documentation</Link>
+                            <Link to="/Test/Performance">Performance Testing</Link>
+                            <Link to="/Test/CICD">CI/CD</Link>
+                            <Link to="/Test/Documentation">Documentation</Link>
                         </div>
                     )}
                 </div>

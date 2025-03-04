@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import "./Sales.css";
-import order from "../../../assets/order.png";
+import order from "../../../assets/resautrant_order.jpg";
 import sales1 from "../../../assets/uptrillion_sales1.png";
 import sales2 from "../../../assets/uptrillion_sales2.png";
 import sales3 from "../../../assets/uptrillion_sales3.png";
