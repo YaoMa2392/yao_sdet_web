@@ -11,6 +11,7 @@ import Sales from "./pages/Project/Sales/Sales";
 import Payment from "./pages/Project/Payment/Payment";
 import Inventory from "./pages/Project/Inventory/Inventory";
 import Analytics from "./pages/Project/Analytics/Analytics";
+import Functionality from "./pages/Test/Functionality/Functionality";
 
 const routes = [
     {
@@ -49,6 +50,10 @@ const routes = [
     {
         path: "/Test/Regression",
         element: <Regression />,
+    },
+    {
+        path: "/Test/Functionality",
+        element: <Functionality />,
     },
     {
         path: "*", // Catch-all route for not found

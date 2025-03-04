@@ -44,7 +44,7 @@ const Navbar = () => {
                         <div className="dropdown-menu">
                             {/*<Link to="/test/workflow">Workflow</Link>*/}
                             <Link to="/Test/Design">Design Test</Link>
-                            <Link to="/Test/Functional">Functional Testing</Link>
+                            <Link to="/Test/Functionality">Functional Testing</Link>
                             <Link to="/Test/Regression">Regression Testing</Link>
                             <Link to="/Test/Performance">Performance Testing</Link>
                             <Link to="/Test/CICD">CI/CD</Link>

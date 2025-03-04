@@ -77,9 +77,6 @@ const AboutMe = () => {
                         </p>
                     </FadeInSection>
 
-
-
-
                     <FadeInSection>
                         <h2 className="section-title">🚀 Work Experience</h2>
                         <p className="aboutme-section-text">Description for Module 3.</p>
