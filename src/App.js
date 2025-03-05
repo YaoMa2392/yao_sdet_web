@@ -13,6 +13,7 @@ import Inventory from "./pages/Project/Inventory/Inventory";
 import Analytics from "./pages/Project/Analytics/Analytics";
 import Functionality from "./pages/Test/Functionality/Functionality";
 import CICD from "./pages/Test/CICD/CICD";
+import DesignTest from "./pages/Test/DesignTest/DesignTest";
 
 const routes = [
     {
@@ -47,6 +48,10 @@ const routes = [
     {
         path: "/Test",
         element: <Workflow />,
+    },
+    {
+        path: "/Test/DesignTest",
+        element: <DesignTest />,
     },
     {
         path: "/Test/Regression",

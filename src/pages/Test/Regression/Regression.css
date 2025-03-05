@@ -1,65 +1,102 @@
-/* 样式文件：RegressionTest.css */
-
-.test-container {
-    max-width: 800px;
+/* 全局样式 */
+.analytics-showcase {
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: 30px 20px;
 }
 
-h1 {
+/* 头部标题 */
+.analytics-header {
     text-align: center;
+    margin-bottom: 40px;
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+.analytics-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1C3775;
+    margin-top: 16px;
+}
+
+.regression-hero-title {
+    font-size: 4rem;
+    font-weight: lighter;
+    font-family: inherit;
+    color: #1C3775;
+
+    position: absolute; /* 绝对定位 */
+    top: 10%; /* 距离顶部的距离 */
+    left: 10px; /* 距离左侧10px */
+
+    display: inline-block;
+    padding: 10px 20px;
+    z-index: 1; /* 确保文字在前面 */
+
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+.regression-hero-title::before {
+    content: "";
+    position: absolute;
+    top: 56%;
+    left: -20px; /* 让背景条从页面最左侧开始 */
+    width: calc(100vw + 20px); /* 让背景条覆盖整个屏幕，并补偿 left -10px 的偏移 */
+    height: 3em; /* 控制背景条的高度 */
+    background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%); /* 左右深，中间稍微透明的渐变 */
+    transform: translateY(-50%); /* 让背景条垂直居中 */
+    z-index: -1; /* 让背景条在文字后面 */
+    border-radius: 5px; /* 可选：增加圆角 */
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+
+}
+
+
+/* 产品展示模块 */
+.regression-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 180px;
+    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*top: 50%;*/
+    border: 2px solid red; /* 添加红色边框 */
+}
+
+.analytics-product-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.regression-description {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: #333;
 }
 
-.code-container {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.regression-image {
+    width: 600px; /* 设置固定宽度 */
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /*margin-left: 200px;  !* 调整图片左边距 *!*/
+    /*margin-right: 20px; !* 调整图片右边距 *!*/
 }
 
-.test-code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #2d2d2d;
-    color: #f8f8f2;
-    padding: 20px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .regression-image {
+        width: 100%; /* 在小屏幕上适应 */
+        max-width: 300px; /* 限制最大宽度 */
+    }
 }
 
-.run-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.run-button:hover {
-    background-color: #45a049;
-}
-
-.result-container {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.result {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-height: 300px;
-    overflow-y: auto;
-}

@@ -4,7 +4,7 @@ import web from "../../../assets/uptrillion_web.jpg";
 import mobile from "../../../assets/uptrillion_mobile.jpg";
 import cloud from "../../../assets/uptrillion_cloud.png";
 import React, {useState} from "react";
-import d135 from "../../../assets/uptrillion_d135.jpg";
+import download from "../../../assets/download.webp"
 
 const FadeInSection = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -90,14 +90,19 @@ export default function Functionality() {
                     </ul>
                 </motion.div>
 
-                <motion.img
-                    src={d135}
-                    alt="Argo System"
-                    className="sales-image"
+                 {/* 下载 Word 文件的链接 */}
+                <motion.a
+                    href="/Test Plan for Uptrillion Portal.docx"
+                    download="Yao_TestPlanSample.docx"
+                    className="download-link"
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                />
+                >
+                    Download the Test Plan sample designed by Yao Ma Here.
+                    {/*<img src={download} alt="Download Word" className="word-icon" />*/}
+                </motion.a>
+
             </section>
 
 
