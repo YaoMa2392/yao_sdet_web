@@ -1,0 +1,41 @@
+name: CI Pipeline
+
+# 触发条件：每次 push 到仓库时触发工作流
+on:
+  push:
+    branches:
+      - main  # 只在 main 分支发生 push 时触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用 Ubuntu 环境执行任务
+
+    steps:
+      # 步骤1：检出代码
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 步骤2：设置 Node.js 环境
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'  # 设置 Node.js 版本为 16（根据需要修改）
+
+      # 步骤3：安装项目依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 步骤4：运行单元测试（如果你有测试）
+      - name: Run tests
+        run: npm test
+
+      # 步骤5：构建生产版本
+      - name: Build the project
+        run: npm run build
+
+      # 可选：将构建结果上传为 artifact（如果你需要保存构建结果）
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/
