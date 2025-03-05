@@ -23,38 +23,6 @@
 }
 
 
-.functionality-hero-title {
-    font-size: 4rem;
-    font-weight: lighter;
-    font-family: inherit;
-    color: #1C3775;
-
-    position: absolute; /* 绝对定位 */
-    top: 8%; /* 距离顶部的距离 */
-    left: 10px; /* 距离左侧10px */
-
-    display: inline-block;
-    padding: 10px 20px;
-    z-index: 1; /* 确保文字在前面 */
-
-    /*border: 2px solid red; !* 添加红色边框 *!*/
-}
-
-.functionality-hero-title::before {
-    content: "";
-    position: absolute;
-    top: 56%;
-    left: -20px; /* 让背景条从页面最左侧开始 */
-    width: calc(100vw + 20px); /* 让背景条覆盖整个屏幕，并补偿 left -10px 的偏移 */
-    height: 3em; /* 控制背景条的高度 */
-    background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%); /* 左右深，中间稍微透明的渐变 */
-    transform: translateY(-50%); /* 让背景条垂直居中 */
-    z-index: -1; /* 让背景条在文字后面 */
-    border-radius: 5px; /* 可选：增加圆角 */
-    /*border: 2px solid red; !* 添加红色边框 *!*/
-
-}
-
 .cloud-icon {
     width: 300px; /* 根据需要调整图片大小 */
     height: auto;
@@ -82,14 +50,14 @@
 }
 
 /* 产品展示模块 */
-.payment-section {
+.functionality-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     margin-top: 60px;
 }
-.payment-description {
+.functionality-description {
     flex: 1;
     font-size: 1.1rem;
     line-height: 1.7;

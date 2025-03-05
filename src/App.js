@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NotFound } from "./pages/NotFound/NotFound";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Project from "./pages/Project/Project";
 // import Challenges from "./pages/Challenges/Challenges";
@@ -14,6 +14,9 @@ import Analytics from "./pages/Project/Analytics/Analytics";
 import Functionality from "./pages/Test/Functionality/Functionality";
 import CICD from "./pages/Test/CICD/CICD";
 import DesignTest from "./pages/Test/DesignTest/DesignTest";
+import Footer from "./components/Footer/Footer";
+import Documentation from "./pages/Test/Documentation/Documentation";
+import Performance from "./pages/Test/Performance/Performance";
 
 const routes = [
     {
@@ -62,8 +65,16 @@ const routes = [
         element: <Functionality />,
     },
     {
+        path: "/Test/Performance",
+        element: <Performance />,
+    },
+    {
         path: "/Test/CICD",
         element: <CICD />,
+    },
+    {
+        path: "/Test/Documentation",
+        element: <Documentation />,
     },
     {
         path: "*", // Catch-all route for not found
@@ -86,6 +97,7 @@ class App extends React.Component {
                         />
                     ))}
                 </Routes>
+                <Footer />
             </BrowserRouter>
         );
     }

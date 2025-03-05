@@ -1,0 +1,39 @@
+.titlebar {
+    background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center; /* 保持居中对齐 */
+    opacity: 0; /* 初始为透明 */
+    animation: fadeIn 2s forwards; /* 渐变动画 */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* 从下方出现 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 完全显示 */
+    }
+}
+
+.titlebar-container {
+    display: flex;
+    justify-content: center; /* 保持内容居中 */
+    align-items: center; /* 垂直居中 */
+    width: 80%;
+    max-width: 1200px;
+}
+
+.title {
+    /*font-size: 36px;  !* 调整标题字体大小 *!*/
+    margin: 0;
+    text-align: left; /* 内容左对齐 */
+    width: 100%; /* 确保文字从左边开始 */
+    font-size: 4rem;
+    font-weight: lighter;
+    font-family: inherit;
+    color: #1C3775;
+
+}

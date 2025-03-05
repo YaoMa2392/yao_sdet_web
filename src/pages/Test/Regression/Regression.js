@@ -4,6 +4,7 @@ import testplan from "../../../assets/Test Plan0.png";
 import analytics1 from "../../../assets/Uptrillion_web.png";
 import analytics2 from "../../../assets/uptrillion_Analytics.png";
 import React, {useEffect, useState} from "react";
+import TitleBar from "../../../components/TitleBar/TitleBar";
 
 export default function Regression() {
     const [inView, setInView] = useState(false);
@@ -31,23 +32,24 @@ export default function Regression() {
     }, []);
 
     return (
+        <div>
+        <TitleBar title="Regression Testing"/>
         <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1}}
             className="analytics-showcase"
         >
-
-
             {/* Product Section */}{/* Header Section */}
-            <motion.h1
-                initial={{opacity: 0, y: -30}}
-                animate={{opacity: 1, y: 0}}
-                transition={{duration: 1}}
-                className="regression-hero-title"
-            >
-                Regression Testing
-            </motion.h1>
+            {/*<motion.h1*/}
+            {/*    initial={{opacity: 0, y: -30}}*/}
+            {/*    animate={{opacity: 1, y: 0}}*/}
+            {/*    transition={{duration: 1}}*/}
+            {/*    className="regression-hero-title"*/}
+            {/*>*/}
+            {/*    Regression Testing*/}
+            {/*</motion.h1>*/}
+
             <section className="regression-section">
                 <motion.div
                     className="regression-description"
@@ -121,5 +123,6 @@ export default function Regression() {
                 />
             </section>
         </motion.div>
+            </div>
     );
 }

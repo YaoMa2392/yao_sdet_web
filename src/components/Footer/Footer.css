@@ -1,0 +1,55 @@
+.footer {
+  background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%);
+  color: #1C3775;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0; /* 初始为透明 */
+  animation: fadeIn 2s forwards; /* 渐变动画 */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* 从下方出现 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* 完全显示 */
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.footer-logo {
+  /*width: 150px; !* 调整 logo 图片的大小 *!*/
+  /*height: auto;*/
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.footer-contact {
+  text-align: right;
+}
+
+.footer-contact h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}

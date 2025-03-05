@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "./Navbar.css";
 import logo from "../../assets/alamar_logo.webp"; // 导入logo图片
 
 const Navbar = () => {
