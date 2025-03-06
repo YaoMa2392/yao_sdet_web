@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/alamar_logo.webp"; // 导入logo图片
 
@@ -9,10 +9,12 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar-logo">
-                <img src={logo} alt="Alamar Logo" className="logo" />
+                <Link to="/">
+                    <img src={logo} alt="Alamar Logo" className="logo"/>
+                </Link>
             </div>
             <div className="navbar-links">
-                <Link to="/">About Me</Link>
+                <Link to="/AboutMe">About Me</Link>
                 {/*<Link to="/Project">Project</Link>*/}
 
                 {/* 分级菜单：Project */}
@@ -43,9 +45,9 @@ const Navbar = () => {
                     {testMenuOpen && (
                         <div className="dropdown-menu">
                             {/*<Link to="/test/workflow">Workflow</Link>*/}
-                            <Link to="/Test/DesignTest">Design Test</Link>
+                            <Link to="/Test/TestDesign">Test Design</Link>
                             <Link to="/Test/Regression">Regression Testing</Link>
-                            <Link to="/Test/Functionality">Functional Testing</Link>
+                            <Link to="/Test/Functional">Functional Testing</Link>
                             <Link to="/Test/Performance">Performance Testing</Link>
                             <Link to="/Test/CICD">CI/CD</Link>
                             <Link to="/Test/Documentation">Documentation</Link>

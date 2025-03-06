@@ -1,14 +1,13 @@
 import React, {useState} from "react";
-import "./Workflow.css";
+import "./Presentation.css";
 import {motion} from "framer-motion";
-import TitleBar from "../../../components/TitleBar/TitleBar";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
-import sdetDiagram from "../../../assets/SDETDiagram.PNG";
-import testDiagram from "../../../assets/test_diagram.PNG";
+import preDiagram from "../../assets/presentationDiagram.png";
+import TitleBar from "../../components/TitleBar/TitleBar";
 
 
-function Workflow() {
+function Presentation() {
     const [modalOpen, setModalOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
 
@@ -23,33 +22,23 @@ function Workflow() {
 
     return (
         <div>
-            <TitleBar title="Workflow"/>
+            <TitleBar title="About Presentation"/>
             <motion.div
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
-                className="workflow-showcase"
+                className="presentation-showcase"
             >
 
-                {/* Inventory Images Section */}
-                <section className="workflow-section">
+                <section className="presentation-section">
                     <motion.img
-                        src={testDiagram}
+                        src={preDiagram}
                         alt="Argo System"
-                        className="workflow-test-image"
+                        className="presentation-image"
                         initial={{opacity: 0, x: 50}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1, delay: 0.5}}
-                        onClick={() => handleImageClick(testDiagram)} // Open modal with this image
-                    />
-                    <motion.img
-                        src={sdetDiagram}
-                        alt="Argo System"
-                        className="workflow-sdet-image"
-                        initial={{opacity: 0, x: 50}}
-                        animate={{opacity: 1, x: 0}}
-                        transition={{duration: 1, delay: 0.5}}
-                        onClick={() => handleImageClick(sdetDiagram)} // Open modal with this image
+                        onClick={() => handleImageClick(preDiagram)} // Open modal with this image
                     />
                 </section>
 
@@ -58,7 +47,7 @@ function Workflow() {
                     <div className="modal-overlay" onClick={closeModal}>
                         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                             <img src={currentImage} alt="Enlarged view" className="modal-image"/>
-                            <button className="workflow-close-btn" onClick={closeModal}><FontAwesomeIcon icon={faTimes}/></button>
+                            <button className="presentation-close-btn" onClick={closeModal}><FontAwesomeIcon icon={faTimes}/></button>
                         </div>
                     </div>
                 )}
@@ -67,4 +56,4 @@ function Workflow() {
     );
 }
 
-export default Workflow;
+export default Presentation;

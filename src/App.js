@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { NotFound } from "./pages/NotFound/NotFound";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {NotFound} from "./pages/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Project from "./pages/Project/Project";
@@ -11,38 +11,43 @@ import Sales from "./pages/Project/Sales/Sales";
 import Payment from "./pages/Project/Payment/Payment";
 import Inventory from "./pages/Project/Inventory/Inventory";
 import Analytics from "./pages/Project/Analytics/Analytics";
-import Functionality from "./pages/Test/Functionality/Functionality";
+import Functional from "./pages/Test/Functional/Functional";
 import CICD from "./pages/Test/CICD/CICD";
-import DesignTest from "./pages/Test/DesignTest/DesignTest";
+import TestDesign from "./pages/Test/TestDesign/TestDesign";
 import Footer from "./components/Footer/Footer";
 import Documentation from "./pages/Test/Documentation/Documentation";
 import Performance from "./pages/Test/Performance/Performance";
 import QA from "./pages/Q&A/QA";
+import Presentation from "./pages/Presentation/Presentation";
 
 const routes = [
     {
         path: "/",
-        element: <AboutMe />,
+        element: <Presentation/>,
+    },
+    {
+        path: "/AboutMe",
+        element: <AboutMe/>,
     },
     {
         path: "/Project",
-        element: <Project />,
+        element: <Project/>,
     },
     {
         path: "/Project/Sales",
-        element: <Sales />,
+        element: <Sales/>,
     },
     {
         path: "/Project/Payment",
-        element: <Payment />,
+        element: <Payment/>,
     },
     {
         path: "/Project/Inventory",
-        element: <Inventory />,
+        element: <Inventory/>,
     },
     {
         path: "/Project/Analytics",
-        element: <Analytics />,
+        element: <Analytics/>,
     },
     // {
     //     path: "/Challenges",
@@ -51,39 +56,39 @@ const routes = [
 
     {
         path: "/Test",
-        element: <Workflow />,
+        element: <Workflow/>,
     },
     {
-        path: "/Test/DesignTest",
-        element: <DesignTest />,
+        path: "/Test/TestDesign",
+        element: <TestDesign/>,
     },
     {
         path: "/Test/Regression",
-        element: <Regression />,
+        element: <Regression/>,
     },
     {
-        path: "/Test/Functionality",
-        element: <Functionality />,
+        path: "/Test/Functional",
+        element: <Functional/>,
     },
     {
         path: "/Test/Performance",
-        element: <Performance />,
+        element: <Performance/>,
     },
     {
         path: "/Test/CICD",
-        element: <CICD />,
+        element: <CICD/>,
     },
     {
         path: "/Test/Documentation",
-        element: <Documentation />,
+        element: <Documentation/>,
     },
     {
         path: "/Test/QA",
-        element: <QA />,
+        element: <QA/>,
     },
     {
         path: "*", // Catch-all route for not found
-        element: <NotFound />,
+        element: <NotFound/>,
     },
 ];
 
@@ -92,7 +97,7 @@ class App extends React.Component {
         console.log('Rendering App'); // 确保应用程序正在渲染
         return (
             <BrowserRouter>
-                <Navbar />
+                <Navbar/>
                 <Routes>
                     {routes.map((routeData, index) => (
                         <Route
@@ -102,7 +107,7 @@ class App extends React.Component {
                         />
                     ))}
                 </Routes>
-                <Footer />
+                <Footer/>
             </BrowserRouter>
         );
     }

@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import "./Functionality.css";
+import "./Functional.css";
 import cloud from "../../../assets/uptrillion_cloud.png";
 import React, {useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
@@ -18,7 +18,7 @@ const FadeInSection = ({children}: { children: React.ReactNode }) => {
     );
 };
 
-export default function Functionality() {
+export default function Functional() {
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
 
     // 处理鼠标位置的变化
@@ -35,7 +35,7 @@ export default function Functionality() {
 
     return (
         <div>
-            <TitleBar title="Functionality Testing"/>
+            <TitleBar title="Functional Testing"/>
 
             <div className="functionality-container" onMouseMove={handleMouseMove}>
                 {/* Hero Section */}

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "./DesignTest.css";
+import "./TestDesign.css";
 import TitleBar from "../../../components/TitleBar/TitleBar"; // 导入CSS文件
 
-function DesignTest() {
+function TestDesign() {
     const [testResult, setTestResult] = useState(null);
 
     const handleRunTest = async () => {
@@ -18,7 +18,7 @@ function DesignTest() {
 
     return (
         <div>
-            <TitleBar title="Design Test"/>
+            <TitleBar title="Test Design"/>
 
             <div className="test-container">
                 <h1>Regression Test</h1>
@@ -46,4 +46,4 @@ function DesignTest() {
     );
 }
 
-export default DesignTest;
+export default TestDesign;
