@@ -17,6 +17,7 @@ import DesignTest from "./pages/Test/DesignTest/DesignTest";
 import Footer from "./components/Footer/Footer";
 import Documentation from "./pages/Test/Documentation/Documentation";
 import Performance from "./pages/Test/Performance/Performance";
+import QA from "./pages/Q&A/QA";
 
 const routes = [
     {
@@ -75,6 +76,10 @@ const routes = [
     {
         path: "/Test/Documentation",
         element: <Documentation />,
+    },
+    {
+        path: "/Test/QA",
+        element: <QA />,
     },
     {
         path: "*", // Catch-all route for not found

@@ -11,7 +11,7 @@ class NotFound extends React.Component {
                 subTitle="Sorry, the page you visited does not exist."
                 extra={
                     <Link to="/">
-                        <Button type="primary">Back BoLe</Button>
+                        <Button type="primary">Back to Home</Button>
                     </Link>
                 }
             />

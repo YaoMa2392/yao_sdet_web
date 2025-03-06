@@ -1,7 +1,57 @@
-/* 样式文件：RegressionTest.css */
+/* 全局样式 */
+.analytics-showcase {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
 
-.test-container {
-    max-width: 800px;
+/* 头部标题 */
+.analytics-header {
+    text-align: center;
+    margin-bottom: 40px;
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+.analytics-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1C3775;
+    margin-top: 16px;
+}
+
+
+/* 产品展示模块 */
+.performance-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 180px;*/
+    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*top: 50%;*/
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+.performance-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 20px;*/
+}
+.performance-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.test-container-githubaction {
+    max-width: 720px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -12,14 +62,14 @@ h1 {
     color: #333;
 }
 
-.code-container {
+.code-container-githubaction {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.test-code {
+.test-code-githubaction {
     font-family: 'Courier New', Courier, monospace;
     background-color: #2d2d2d;
     color: #f8f8f2;
@@ -29,37 +79,65 @@ h1 {
     word-wrap: break-word;
 }
 
-.run-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.run-button:hover {
-    background-color: #45a049;
-}
-
-.result-container {
-    background-color: #f9f9f9;
-    padding: 15px;
+.test-container-jenkins {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 600px; /* 固定高度 */
+    /*border: 1px solid #ccc; !* 增加边框 *!*/
     border-radius: 8px;
-    border: 1px solid #ddd;
+    /*background-color: #1e1e1e; !* 让整体背景颜色深色更协调 *!*/
+    overflow: hidden; /* 避免溢出 */
 }
 
-.result {
+.code-container-jenkins {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 100%; /* 让它填充整个 test-container */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.test-code-jenkins {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #eee;
-    padding: 10px;
+    background-color: #2d2d2d;
+    color: #33FF33;
+    padding: 20px;
     border-radius: 5px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    max-height: 300px;
-    overflow-y: auto;
+    max-height: 540px; /* 限制代码区域的高度 */
+    overflow: auto; /* 添加滚动条 */
+
 }
+
+
+.performance-description {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.performance-image {
+    width: 360px; /* 设置固定宽度 */
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /*margin-left: 200px;  !* 调整图片左边距 *!*/
+    /*margin-right: 20px; !* 调整图片右边距 *!*/
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .performance-image {
+        width: 100%; /* 在小屏幕上适应 */
+        max-width: 300px; /* 限制最大宽度 */
+    }
+}
+

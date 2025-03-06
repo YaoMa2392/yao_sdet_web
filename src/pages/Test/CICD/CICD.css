@@ -84,6 +84,11 @@ h1 {
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    height: 600px; /* 固定高度 */
+    /*border: 1px solid #ccc; !* 增加边框 *!*/
+    border-radius: 8px;
+    /*background-color: #1e1e1e; !* 让整体背景颜色深色更协调 *!*/
+    overflow: hidden; /* 避免溢出 */
 }
 
 .code-container-jenkins {
@@ -91,16 +96,23 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    height: 100%; /* 让它填充整个 test-container */
+    display: flex;
+    flex-direction: column;
+
 }
 
 .test-code-jenkins {
     font-family: 'Courier New', Courier, monospace;
     background-color: #2d2d2d;
-    color: #f8f8f2;
+    color: #33FF33;
     padding: 20px;
     border-radius: 5px;
     white-space: pre-wrap;
     word-wrap: break-word;
+    max-height: 540px; /* 限制代码区域的高度 */
+    overflow: auto; /* 添加滚动条 */
+
 }
 
 

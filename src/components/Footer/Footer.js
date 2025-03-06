@@ -16,7 +16,7 @@ const Footer = () => {
           <h4>Contact Me</h4>
           <p>Email: yao.ngsde@gmail.com</p>
           <p>Phone: +1 (551) 331-5704</p>
-          <p>LinkedIn: 123 Main St, City, Country</p>
+          <p>LinkedIn: https://www.linkedin.com/in/yaoma1111/</p>
         </div>
       </div>
     </footer>

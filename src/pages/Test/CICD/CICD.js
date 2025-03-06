@@ -232,7 +232,7 @@ export default function CICD() {
 
                     <div className="test-container-jenkins">
                         <div className="code-container-jenkins">
-                            <h2>.github/workflows/main.yml</h2>
+                            <h2>./Jenkinsfile</h2>
                             <pre className="test-code-jenkins">{jenkinsfileContent}</pre>
                         </div>
                     </div>

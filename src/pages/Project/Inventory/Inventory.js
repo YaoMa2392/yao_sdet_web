@@ -6,8 +6,6 @@ import inventory2 from "../../../assets/uptrillion_inventory2.png";
 import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
-import analytics1 from "../../../assets/Uptrillion_web.png";
-import analytics2 from "../../../assets/uptrillion_Analytics.png";
 
 export default function Inventory() {
     const [inView, setInView] = useState(false);
