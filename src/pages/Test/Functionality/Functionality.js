@@ -1,10 +1,7 @@
 import {motion} from "framer-motion";
 import "./Functionality.css";
-import web from "../../../assets/uptrillion_web.jpg";
-import mobile from "../../../assets/uptrillion_mobile.jpg";
 import cloud from "../../../assets/uptrillion_cloud.png";
 import React, {useState} from "react";
-import download from "../../../assets/download.webp"
 import TitleBar from "../../../components/TitleBar/TitleBar";
 
 const FadeInSection = ({children}: { children: React.ReactNode }) => {
