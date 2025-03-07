@@ -1,8 +1,6 @@
 import {motion} from "framer-motion";
 import "./Regression.css";
 import testplan from "../../../assets/Test Plan0.png";
-import analytics from "../../../assets/Uptrillion_web.png";
-import inventory from "../../../assets/uptrillion_inventory1.png";
 import regressionAnalytics from "../../../assets/regression_analytics.png";
 import regressionInventory from "../../../assets/regression_inventory.png";
 import regressionObj from "../../../assets/regression_ObjSco.PNG";
@@ -39,6 +37,31 @@ export default function Regression() {
             images.forEach(image => observer.unobserve(image)); // Clean up observer
         };
     }, []);
+
+    const alamarAuto = `@Test
+public void testImmBtn() {
+    try {
+        driver.get(BASE_URL);
+
+        // Locate the "Request a Quote" button and click
+        WebElement button = driver.findElement(By.xpath("//a[@href='https://alamarbio.com/contact-us/']//span[contains(text(),'request a Quote')]"));
+        Assert.assertNotNull(button, "Button Not Found");
+        button.click();
+
+        // Wait until the page's <h1> element with the text "Contact us" is visible
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(@class, 'elementor-heading-title') and contains(text(), 'Contact us')]")));
+
+        // Verify page title
+        String expectedTitle = "A Silicon Valley Proteomics Startup Company: Alamar Biosciences Inc.";
+        String actualTitle = driver.getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedTitle), "Quote page title does not match!");
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        Assert.fail("Exception occurred in testForm: " + e.getMessage());
+    }
+}`;
 
     const challenges = [
         {
@@ -237,9 +260,19 @@ export default function Regression() {
 
                 <Divider />
 
+                <div className="test-container-jenkins">
+                    <div className="code-container-jenkins">
+                        <h2>./alamarAuto</h2>
+                        <pre className="test-code-jenkins">{alamarAuto}</pre>
+                    </div>
+                </div>
+
+                <Divider />
+
                 <section className="regression-section7">
                     <ChallengeTable challenges={challenges} />
                 </section>
+
 
             </motion.div>
         </div>

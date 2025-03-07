@@ -7,9 +7,6 @@ import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
 import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";
 import Divider from "../../../components/Divider/Divider";
-import performanceResponse from "../../../assets/performance_response.png";
-import performanceResponse2 from "../../../assets/performance_response2.png";
-import performanceReport from "../../../assets/performance_report.PNG";
 import JMeter from "../../../assets/JMeterReport.png"
 
 export default function Performance() {
@@ -36,26 +33,6 @@ export default function Performance() {
             images.forEach(image => observer.unobserve(image)); // Clean up observer
         };
     }, []);
-
-    const jmeterScript = `
-<ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payment Stress Test" enabled="true">
-    <stringProp name="ThreadGroup.num_threads">1000</stringProp> 
-    <stringProp name="ThreadGroup.ramp_time">60</stringProp> 
-    <stringProp name="ThreadGroup.duration">300</stringProp> 
-
-    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Payment API" enabled="true">
-        <stringProp name="HTTPSampler.domain">payment.uptrillion.com</stringProp>
-        <stringProp name="HTTPSampler.port">443</stringProp>
-        <stringProp name="HTTPSampler.protocol">https</stringProp>
-        <stringProp name="HTTPSampler.path">/process_payment</stringProp>
-        <stringProp name="HTTPSampler.method">POST</stringProp>
-        <stringProp name="HTTPSampler.postBodyRaw">{"order_id": "12345", "amount": 50.99}</stringProp>
-    </HTTPSamplerProxy>
-
-    <ResultCollector testclass="ResultCollector" testname="View Results Tree" enabled="true"/>
-</ThreadGroup>
-  `;
-
 
     const challenges = [
         {
