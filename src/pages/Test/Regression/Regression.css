@@ -7,6 +7,14 @@
     font-family: "Roboto", Sans-serif;
 }
 
+.divider {
+    border: 0;
+    border-top: 2px solid #ccc; /* 控制分割线的颜色和宽度 */
+    width: 100%;
+    margin: 40px 0; /* 控制分割线上下的间距 */
+}
+
+
 /* 产品展示模块 */
 .regression-section {
     width: 100%;
@@ -20,13 +28,16 @@
     /*border: 2px solid red; !* 添加红色边框 *!*/
 }
 
-.analytics-product-section {
+.regression-product-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     margin-top: 80px;
 }
+
+
+
 
 .regression-description {
     flex: 1;
@@ -35,12 +46,14 @@
     color: #333;
 }
 
+
 .regression-image {
     width: 600px; /* 设置固定宽度 */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /*margin-top: 10px;*/
     /*margin-left: 200px;  !* 调整图片左边距 *!*/
     /*margin-right: 20px; !* 调整图片右边距 *!*/
 }
@@ -53,3 +66,66 @@
     }
 }
 
+.regression-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 40px;*/
+}
+
+.regression-section3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 20px;*/
+}
+
+.left-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 控制上下间距 */
+}
+
+.regression-image-right {
+    width: 600px; /* 调整大小以适应布局 */
+    height: auto;
+    max-width: 100%;
+    /*max-width: 300px; !* 你可以调整这个值 *!*/
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.regression-section4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 40px;*/
+}
+
+.regression-section5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 40px;*/
+}
+
+.regression-section6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.regression-section7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}

@@ -31,12 +31,13 @@
 
 .performance-section2 {
     gap: 40px;
-    margin-top: 200px;
+    margin-top: 260px;
     display: flex; /* 使用 Flexbox 布局 */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中 */
     height: 60vh; /* 让 section 占据整个视口高度 */
     padding: 20px; /* 增加一点内边距 */
+    margin-bottom: 260px;
 }
 .performance-section3 {
     gap: 40px;
@@ -51,7 +52,7 @@
 
 .performance-section4 {
     /*gap: 40px;*/
-    /*margin-top: 40px;*/
+    margin-top: 10px;
     display: flex; /* 使用 Flexbox 布局 */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中 */
@@ -212,4 +213,16 @@ h1 {
   color: #333;                /* 字体颜色 */
   overflow-x: auto;           /* 让代码在过长时可以横向滚动 */
   word-wrap: break-word;      /* 自动换行 */
+}
+
+.regression-image-report {
+    width: 100%; /* Set fixed width */
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-left: auto;  /* Automatically adjusts left margin */
+    margin-right: auto; /* Automatically adjusts right margin */
+    display: block;     /* Make the image a block element to center it */
 }

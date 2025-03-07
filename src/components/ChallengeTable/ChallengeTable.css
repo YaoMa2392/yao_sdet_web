@@ -20,11 +20,11 @@ table {
 }
 
 thead th {
-    font-size: 1.2rem;  /* 表头字体稍微大一点 */
+    font-size: 1.1rem;  /* 表头字体稍微大一点 */
 }
 
 tbody td {
-    font-size: 1.1rem;    /* 表格内容字体 */
+    font-size: 1rem;    /* 表格内容字体 */
     padding: 1rem;      /* 行内边距 */
 }
 

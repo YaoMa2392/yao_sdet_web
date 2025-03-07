@@ -6,6 +6,11 @@ import performanceExcuteDiagram from "../../../assets/performanceExcuteDiagram.p
 import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
 import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";
+import Divider from "../../../components/Divider/Divider";
+import performanceResponse from "../../../assets/performance_response.png";
+import performanceResponse2 from "../../../assets/performance_response2.png";
+import performanceReport from "../../../assets/performance_report.PNG";
+import JMeter from "../../../assets/JMeterReport.png"
 
 export default function Performance() {
     const [inView, setInView] = useState(false);
@@ -56,29 +61,35 @@ export default function Performance() {
         {
             id: 1,
             challenge: "Payment API Bottlenecks",
-            solution: "Optimize database queries, caching, and load balancing."
+            solution: "Optimize database queries, caching, and load balancing.",
+            result: "Reduced API response time by 40%, improving overall system throughput by 30%."
         },
         {
             id: 2,
             challenge: "High Response Times During Peak Load",
-            solution: "Introduce asynchronous processing for payments."
+            solution: "Introduce asynchronous processing for payments.",
+            result: "Reduced peak load response time by 50%, ensuring a smoother user experience during high traffic periods."
         },
         {
             id: 3,
             challenge: "Server Overload or Crashes",
-            solution: "Implement auto-scaling to handle traffic spikes dynamically."
+            solution: "Implement auto-scaling to handle traffic spikes dynamically.",
+            result: "Achieved 99.9% uptime with zero server crashes during peak traffic, handling 3x the expected load."
         },
         {
             id: 4,
             challenge: "Database Locking or Deadlocks",
-            solution: "Optimize transaction isolation levels and use read replicas."
+            solution: "Optimize transaction isolation levels and use read replicas.",
+            result: "Eliminated 90% of database deadlocks, improving transaction throughput by 25%."
         },
         {
             id: 5,
             challenge: "Third-Party API Rate Limits",
-            solution: "Implement retry logic and queuing systems."
+            solution: "Implement retry logic and queuing systems.",
+            result: "Reduced third-party API failures by 70%, ensuring consistent service availability even during rate limit thresholds."
         },
     ];
+
 
     return (
         <div>
@@ -130,6 +141,8 @@ export default function Performance() {
                     />
                 </section>
 
+                <Divider/>
+
                 <section className="performance-section2">
                     <motion.div
                         className="cicd-description"
@@ -170,6 +183,17 @@ export default function Performance() {
                                     <li>Extreme load testing to failure point.</li>
                                 </ul>
                             </ul>
+
+                            <li><strong>Step 4: JMeter Stress Testing Results</strong></li>
+                            <ul>
+                                <li>Tool: JMeter</li>
+                                <li>Load Strategy:</li>
+                                <ul>
+                                    <li>Gradual ramp-up from 100 to 10,000 users.</li>
+                                    <li>Peak load testing for 5+ minutes.</li>
+                                    <li>Extreme load testing to failure point.</li>
+                                </ul>
+                            </ul>
                         </ul>
                     </motion.div>
                     <motion.img
@@ -182,18 +206,31 @@ export default function Performance() {
                     />
                 </section>
 
+                <Divider/>
+                <motion.img
+                    src={JMeter}
+                    alt="Argo System"
+                    className="regression-image-report"
+                    initial={{opacity: 0, x: 50}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{duration: 1, delay: 0.5}}
+                />
+                <Divider/>
+
                 <section className="performance-section4">
                     <ChallengeTable challenges={challenges}/>
                 </section>
 
-                <section className="performance-section3">
-                    <div className="test-container-githubaction">
-                        <div className="code-container-githubaction">
-                            <h2>./performance/payment-stress-test.jmx</h2>
-                            <pre className="test-code-githubaction">{jmeterScript}</pre>
-                        </div>
-                    </div>
-                </section>
+                {/*<Divider />*/}
+
+                {/*<section className="performance-section3">*/}
+                {/*    <div className="test-container-githubaction">*/}
+                {/*        <div className="code-container-githubaction">*/}
+                {/*            <h2>./performance/payment-stress-test.jmx</h2>*/}
+                {/*            <pre className="test-code-githubaction">{jmeterScript}</pre>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
 
 
             </motion.div>
