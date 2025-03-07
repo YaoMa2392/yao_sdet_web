@@ -83,7 +83,7 @@ const routes = [
         element: <Documentation/>,
     },
     {
-        path: "/Test/QA",
+        path: "/QA",
         element: <QA/>,
     },
     {

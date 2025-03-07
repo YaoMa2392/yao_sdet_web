@@ -20,10 +20,13 @@
     cursor: pointer;
     font-weight: bold;
     position: absolute; /* 让每个词可以自由漂浮 */
-    transition: transform 0.3s, color 0.3s; /* 平滑的动画效果 */
+    transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .word.hovered {
-    color: #407EC9; /* 悬浮时的颜色 */
-    transform: scale(1.5); /* 悬浮时放大 */
+    color: #FF9E00; /* 悬浮时的颜色 */
+    transform: scale(1.7); /* 放大效果 */
+    box-shadow: 0px 0px 30px rgba(255, 158, 0, 0.5); /* 增加阴影 */
+    text-shadow: 0 0 10px rgba(255, 158, 0, 0.8); /* 发光效果 */
 }
+

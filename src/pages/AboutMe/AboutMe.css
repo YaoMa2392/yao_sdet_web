@@ -46,35 +46,62 @@
     opacity: 0.6;
     max-width: 80%;
 }
-
 /* 内容部分 */
 .content-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
+    position: relative;
 }
 
+/* Section标题 */
 .section-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
+    background: linear-gradient(45deg, #FFCE00, #FF9E00);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.aboutme-section-text {
+.section-title:hover {
+    transform: scale(1.1);
+    color: #FFCE00;
+}
+
+/* 文本样式 */
+.section-text {
     font-size: 1.2rem;
     color: #407EC9;
+    transition: color 0.3s ease;
+}
+
+.section-text:hover {
+    color: #1C3775;
 }
 
 /* 滚动渐入动画 */
 .fade-section {
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* 响应式适配 */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
     .section-title {
         font-size: 1.5rem;
     }

@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
-import WordCloud from "../../components/WordCloud";
+import WordCloud from "../../components/WordCloud/WordCloud";
 import "./AboutMe.css";
 
 const FadeInSection = ({children}: { children: React.ReactNode }) => {

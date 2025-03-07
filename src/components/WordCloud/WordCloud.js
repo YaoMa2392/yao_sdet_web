@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./styles.css";
+import "./WordCloud.css";
 
 const words = [
     { text: "Software Engineer", value: 60 },

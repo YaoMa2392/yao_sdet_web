@@ -73,7 +73,7 @@ export default function Project() {
             {/* Project Details */}
             <section className="content-section">
                 <FadeInSection>
-                    <h2 className="section-title center-title">About Uptrillion</h2>
+                    <h2 className="project-section-title center-title">About Uptrillion</h2>
                     <p className="project-section-text">
                         Uptrillion, a subsidiary of PAX Technology, Inc., offers an integrated cloud solution for mobile
                         point of sale (mPOS) applications, catering to businesses across various platforms. Their
@@ -105,7 +105,7 @@ export default function Project() {
                     initial={{opacity: 0, y: -30}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 1}}
-                    className="section-title"
+                    className="project-section-title"
                 >
                     🚀 Core Features
                 </motion.h2>
