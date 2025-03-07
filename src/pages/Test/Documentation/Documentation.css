@@ -1,65 +1,123 @@
-/* 样式文件：RegressionTest.css */
-
-.test-container {
-    max-width: 800px;
+/* 全局样式 */
+.analytics-showcase {
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: 30px 20px;
+    font-family: "Roboto", Sans-serif;
 }
 
-h1 {
-    text-align: center;
+/* 产品展示模块 */
+.regression-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 180px;*/
+    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*top: 50%;*/
+    /*border: 2px solid red; !* 添加红色边框 *!*/
+}
+
+.regression-product-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+
+
+
+.regression-description {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: #333;
 }
 
-.code-container {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+
+.regression-image {
+    width: 600px; /* 设置固定宽度 */
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /*margin-top: 10px;*/
+    /*margin-left: 200px;  !* 调整图片左边距 *!*/
+    /*margin-right: 20px; !* 调整图片右边距 *!*/
 }
 
-.test-code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #2d2d2d;
-    color: #f8f8f2;
-    padding: 20px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .regression-image {
+        width: 100%; /* 在小屏幕上适应 */
+        max-width: 300px; /* 限制最大宽度 */
+    }
 }
 
-.run-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.regression-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 40px;*/
 }
 
-.run-button:hover {
-    background-color: #45a049;
+.regression-section3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 20px;*/
 }
 
-.result-container {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+.left-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 控制上下间距 */
 }
 
-.result {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-height: 300px;
-    overflow-y: auto;
+.regression-image-right {
+    width: 600px; /* 调整大小以适应布局 */
+    height: auto;
+    max-width: 100%;
+    /*max-width: 300px; !* 你可以调整这个值 *!*/
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.regression-section4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 40px;*/
+}
+
+.regression-section5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /*margin-top: 40px;*/
+}
+
+.regression-section6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.regression-section7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 100px;
+    margin-bottom: 40px;
 }
