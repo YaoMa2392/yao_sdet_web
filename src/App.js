@@ -22,7 +22,7 @@ import Presentation from "./pages/Presentation/Presentation";
 
 const routes = [
     {
-        path: "/",
+        path: "/alamar-pres",
         element: <Presentation/>,
     },
     {

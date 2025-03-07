@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar-logo">
-                <Link to="/">
+                <Link to="/alamar-pres">
                     <img src={logo} alt="Alamar Logo" className="logo"/>
                 </Link>
             </div>
