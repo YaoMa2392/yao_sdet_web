@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./Sales.css";
 import order from "../../../assets/resautrant_order.jpg";

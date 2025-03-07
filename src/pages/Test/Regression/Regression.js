@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./Regression.css";
 import testplan from "../../../assets/Test Plan0.png";
@@ -7,7 +8,6 @@ import regressionObj from "../../../assets/regression_ObjSco.PNG";
 import regressionApproach from "../../../assets/regression_Approach.PNG";
 import regressionAnalyticsPlan from "../../../assets/regression_analytics_plan.PNG";
 import regressionInventoryPlan from "../../../assets/regression_inventory_plan.PNG"
-
 import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
 import Divider from "../../../components/Divider/Divider";

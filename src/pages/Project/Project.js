@@ -1,12 +1,10 @@
+// eslint-disable-next-line
 import {motion} from "framer-motion";
 import "./Project.css";
 import web from "../../assets/uptrillion_web.jpg";
 import mobile from "../../assets/uptrillion_mobile.jpg";
 import cloud from "../../assets/uptrillion_cloud.png";
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
-import inventory1 from "../../assets/uptrillion_inventory1.png";
-import inventory2 from "../../assets/uptrillion_inventory2.png";
 
 const FadeInSection = ({children}: { children: React.ReactNode }) => {
     return (

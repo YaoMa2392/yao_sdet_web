@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./TestDesign.css";
 import testplanDiagram from "../../../assets/testplanDiagram.png";

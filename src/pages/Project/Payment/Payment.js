@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import "./Payment.css";
 import d135 from "../../../assets/uptrillion_d135.jpg";

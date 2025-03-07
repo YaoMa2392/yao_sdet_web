@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./Inventory.css";
 import inventory from "../../../assets/uptrillion_inventory.webp";

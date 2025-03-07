@@ -1,11 +1,6 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./Documentation.css";
-import regressionAnalytics from "../../../assets/regression_analytics.png";
-import regressionInventory from "../../../assets/regression_inventory.png";
-import regressionObj from "../../../assets/regression_ObjSco.PNG";
-import regressionApproach from "../../../assets/regression_Approach.PNG";
-import regressionAnalyticsPlan from "../../../assets/regression_analytics_plan.PNG";
-import regressionInventoryPlan from "../../../assets/regression_inventory_plan.PNG";
 import documentPlan from "../../../assets/Test Plan0.png";
 import documentPlan2 from "../../../assets/Document_plan2.PNG";
 import documentBug from "../../../assets/Document_bug.PNG";

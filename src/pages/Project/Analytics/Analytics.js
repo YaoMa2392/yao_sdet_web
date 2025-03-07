@@ -1,11 +1,10 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./Analytics.css";
 import analytics from "../../../assets/uptrillion_analytics.jpg";
 import analytics1 from "../../../assets/Uptrillion_web.png";
 import analytics2 from "../../../assets/uptrillion_Analytics.png";
 import React, {useEffect, useState} from "react";
-import inventory1 from "../../../assets/uptrillion_inventory1.png";
-import inventory2 from "../../../assets/uptrillion_inventory2.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
 

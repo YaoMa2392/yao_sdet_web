@@ -1,8 +1,7 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./CICD.css";
 import cicdDiagram from "../../../assets/cicdDiagram.png"
-import analytics1 from "../../../assets/Uptrillion_web.png";
-import analytics2 from "../../../assets/uptrillion_Analytics.png";
 import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
 import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";

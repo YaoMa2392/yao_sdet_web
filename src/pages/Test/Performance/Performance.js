@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {motion} from "framer-motion";
 import "./Performance.css";
 import payment from "../../../assets/uptrillion_payment.png";
@@ -87,7 +88,7 @@ export default function Performance() {
                     >
                         <p><strong>Performance Testing in Uptrillion POSket App</strong></p>
                         <p>
-                            TPerformance testing, particularly stress testing, is critical for Uptrillion's POSket App,
+                            Performance testing, particularly stress testing, is critical for Uptrillion's POSket App,
                             as it handles restaurant orders where peak hours create high transactional loads. The
                             primary concern is ensuring the payment server's stability, as it is the backbone of the POS
                             system.
