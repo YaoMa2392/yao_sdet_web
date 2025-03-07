@@ -3,11 +3,11 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - main  # 只在 main 分支发生 push 时触发
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # 使用 Ubuntu 环境执行任务
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -16,10 +16,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22'  # 设置 Node.js 版本
+          node-version: '22'
 
       - name: Install dependencies
-        run: npm install  # 安装依赖
+        run: npm install
 
-      - name: Build the project
-        run: npm run build  # 构建项目
+      - name: start the project
+        run: npm start
