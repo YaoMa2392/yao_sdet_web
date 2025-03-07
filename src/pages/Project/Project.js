@@ -3,7 +3,10 @@ import "./Project.css";
 import web from "../../assets/uptrillion_web.jpg";
 import mobile from "../../assets/uptrillion_mobile.jpg";
 import cloud from "../../assets/uptrillion_cloud.png";
-import {useState} from "react";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
+import inventory1 from "../../assets/uptrillion_inventory1.png";
+import inventory2 from "../../assets/uptrillion_inventory2.png";
 
 const FadeInSection = ({children}: { children: React.ReactNode }) => {
     return (
@@ -83,13 +86,15 @@ export default function Project() {
                 </FadeInSection>
 
                 {/* 图片展示部分 */}
-                <div className="image-container">
-                    <div className="image-box">
-                        <img src={web} alt="Project screenshot 1" className="project-image"/>
-                    </div>
-                    <div className="image-box">
-                        <img src={mobile} alt="Project screenshot 2" className="project-image"/>
-                    </div>
+                <div className="project-image-container">
+                    <a href="https://www.uptrillion.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={web} alt="Project screenshot 1" className="project-image-uptrillion"/>
+                    </a>
+
+                    <a href="https://apps.apple.com/us/app/posket/id1568716643" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src={mobile} alt="Project screenshot 2" className="project-image-uptrillion"/>
+                    </a>
                 </div>
             </section>
 

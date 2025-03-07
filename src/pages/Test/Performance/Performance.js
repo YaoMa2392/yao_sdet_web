@@ -1,8 +1,11 @@
 import {motion} from "framer-motion";
 import "./Performance.css";
-import performanceDiagram from "../../../assets/performanceDiagram.PNG"
+import payment from "../../../assets/uptrillion_payment.png";
+import payment2 from "../../../assets/uptrillion_payment2.png";
+import performanceExcuteDiagram from "../../../assets/performanceExcuteDiagram.png";
 import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
+import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";
 
 export default function Performance() {
     const [inView, setInView] = useState(false);
@@ -21,7 +24,7 @@ export default function Performance() {
             threshold: 0.5,  // When 50% of the element is visible
         });
 
-        const images = document.querySelectorAll('.analytics-product-section img');
+        const images = document.querySelectorAll('.performance-product-section img');
         images.forEach(image => observer.observe(image));
 
         return () => {
@@ -29,34 +32,53 @@ export default function Performance() {
         };
     }, []);
 
-    const githubActionYaml = `
-    name: Build and Deploy
-    on:
-      push:
-        branches:
-          - main
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Set up JDK 11
-            uses: actions/setup-java@v2
-            with:
-              java-version: '11'
-          - name: Cache Maven dependencies
-            uses: actions/cache@v2
-            with:
-              path: ~/.m2/repository
-              key: \${{ runner.os }}-maven-\${{ hashFiles('**/pom.xml') }}
-              restore-keys: |
-                \${{ runner.os }}-maven-
-          - name: Build with Maven
-            run: mvn clean install
-          - name: Deploy to Production
-            run: ./deploy.sh
+    const jmeterScript = `
+<ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payment Stress Test" enabled="true">
+    <stringProp name="ThreadGroup.num_threads">1000</stringProp> 
+    <stringProp name="ThreadGroup.ramp_time">60</stringProp> 
+    <stringProp name="ThreadGroup.duration">300</stringProp> 
+
+    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Payment API" enabled="true">
+        <stringProp name="HTTPSampler.domain">payment.uptrillion.com</stringProp>
+        <stringProp name="HTTPSampler.port">443</stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.path">/process_payment</stringProp>
+        <stringProp name="HTTPSampler.method">POST</stringProp>
+        <stringProp name="HTTPSampler.postBodyRaw">{"order_id": "12345", "amount": 50.99}</stringProp>
+    </HTTPSamplerProxy>
+
+    <ResultCollector testclass="ResultCollector" testname="View Results Tree" enabled="true"/>
+</ThreadGroup>
   `;
 
+
+    const challenges = [
+        {
+            id: 1,
+            challenge: "Payment API Bottlenecks",
+            solution: "Optimize database queries, caching, and load balancing."
+        },
+        {
+            id: 2,
+            challenge: "High Response Times During Peak Load",
+            solution: "Introduce asynchronous processing for payments."
+        },
+        {
+            id: 3,
+            challenge: "Server Overload or Crashes",
+            solution: "Implement auto-scaling to handle traffic spikes dynamically."
+        },
+        {
+            id: 4,
+            challenge: "Database Locking or Deadlocks",
+            solution: "Optimize transaction isolation levels and use read replicas."
+        },
+        {
+            id: 5,
+            challenge: "Third-Party API Rate Limits",
+            solution: "Implement retry logic and queuing systems."
+        },
+    ];
 
     return (
         <div>
@@ -65,7 +87,7 @@ export default function Performance() {
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
-                className="analytics-showcase"
+                className="performance-showcase"
             >
 
                 <section className="performance-section1">
@@ -75,32 +97,31 @@ export default function Performance() {
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1, delay: 0.3}}
                     >
-                        <p><strong>CI/CD for Uptrillion</strong></p>
+                        <p><strong>Performance Testing in Uptrillion POSket App</strong></p>
                         <p>
-                            The CI/CD pipeline for the Uptrillion project is designed to ensure automated testing and
-                            consistent software quality throughout the development cycle. After completing the
-                            automation test scripts, we push the code to GitHub for review. Once the changes are
-                            approved, they are merged into the main repository. The repository is integrated with GitHub
-                            Actions, which automatically triggers a build and test process whenever code is merged into
-                            the main branch. This step ensures that the newly merged code does not disrupt existing
-                            functionality or tests.
+                            TPerformance testing, particularly stress testing, is critical for Uptrillion's POSket App,
+                            as it handles restaurant orders where peak hours create high transactional loads. The
+                            primary concern is ensuring the payment server's stability, as it is the backbone of the POS
+                            system.
+                            Key objectives of performance testing:
                         </p>
-                        <p>
-                            Given the sensitive nature of transaction data in the company's apps, we avoid running tests
-                            on GitHub Actions, which is not secure enough for handling such information. Instead,
-                            Jenkins is used to manage the local scheduling of tests, where it regularly executes the
-                            test cases to verify the functionality of Uptrillion's features. This setup helps maintain
-                            the stability and reliability of the application while safeguarding sensitive data.
-                        </p>
-                        <p>
-                            The process is continuously refined based on feedback from test results. The feedback loop
-                            ensures that the test strategy, scripts, and scheduling remain aligned with the evolving
-                            project requirements.
-                        </p>
+                        <ul>
+                            <li>Identify system bottlenecks during peak times (e.g., dinner rush).</li>
+                            <li>Ensure payment processing remains stable and responsive under high loads.</li>
+                            <li>Determine system's breaking point and optimize performance before failures occur.</li>
+                        </ul>
                     </motion.div>
 
                     <motion.img
-                        src={performanceDiagram}
+                        src={payment}
+                        alt="Argo System"
+                        className="performance-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
+                    <motion.img
+                        src={payment2}
                         alt="Argo System"
                         className="performance-image"
                         initial={{opacity: 0, x: 50}}
@@ -109,39 +130,72 @@ export default function Performance() {
                     />
                 </section>
 
-
-                {/* Product Picture Section */}
                 <section className="performance-section2">
-                    <div className="test-container-githubaction">
-                        <div className="code-container-githubaction">
-                            <h2>.github/workflows/main.yml</h2>
-                            <pre className="test-code-githubaction">{githubActionYaml}</pre>
-                        </div>
-                    </div>
                     <motion.div
-                        className="performance-description"
+                        className="cicd-description"
                         initial={{opacity: 0, x: -50}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1, delay: 0.3}}
                     >
-                        <p><strong>Key Benefits of Github Action:</strong></p>
+                        <p><strong>Performance Testing Process</strong></p>
                         <ul>
-                            <li><strong>Integration with GitHub: </strong>GitHub Actions
-                                is built into GitHub, so it offers seamless integration with the repository. Every
-                                commit or pull request can automatically trigger workflows, making it easy to automate
-                                testing, building, and deployment directly from GitHub.
-                            </li>
-                            <li><strong>Faster Setup for Simple Pipelines: </strong>For
-                                projects hosted on GitHub, setting up GitHub Actions can be quicker and more
-                                straightforward compared to Jenkins, especially for smaller or less complex pipelines.
-                            </li>
-                            <li><strong>Free for Open Source: </strong>GitHub Actions provides
-                                free CI/CD services for public repositories, which can be a significant benefit for
-                                open-source projects.
-                            </li>
+                            <li><strong>Step 1: Define Testing Scope</strong></li>
+                            <ul><strong>Critical Endpoints:</strong>
+                                <pre className="api-code"><code>POST /add_to_cart</code></pre>
+                                <pre className="api-code"><code>POST /checkout</code></pre>
+                                <pre className="api-code"><code>POST /process_payment</code></pre>
+                            </ul>
+                            <ul><strong>Test Environment:</strong>
+                                <li>Simulated production-like setup.</li>
+                                <li>Database preloaded with realistic restaurant data.</li>
+                                <li>Concurrent users emulating real-world peak loads.</li>
+                            </ul>
+
+                            <li><strong>Step 2: Establish Performance Metrics</strong></li>
+                            <ul>
+                                <li>Response Time: ≤ 500ms</li>
+                                <li>Peak Concurrent Users: 10,000+</li>
+                                <li>Transactions Per Second (TPS): 20,000+</li>
+                                <li>Error Rate: ≤ 0.5%</li>
+                                <li>CPU/Memory Utilization: ≤ 80%</li>
+                            </ul>
+
+                            <li><strong>Step 3: Execute Performance Testing</strong></li>
+                            <ul>
+                                <li>Tool: JMeter</li>
+                                <li>Load Strategy:</li>
+                                <ul>
+                                    <li>Gradual ramp-up from 100 to 10,000 users.</li>
+                                    <li>Peak load testing for 5+ minutes.</li>
+                                    <li>Extreme load testing to failure point.</li>
+                                </ul>
+                            </ul>
                         </ul>
                     </motion.div>
+                    <motion.img
+                        src={performanceExcuteDiagram}
+                        alt="Argo System"
+                        className="performance-image-diagram"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
                 </section>
+
+                <section className="performance-section4">
+                    <ChallengeTable challenges={challenges}/>
+                </section>
+
+                <section className="performance-section3">
+                    <div className="test-container-githubaction">
+                        <div className="code-container-githubaction">
+                            <h2>./performance/payment-stress-test.jmx</h2>
+                            <pre className="test-code-githubaction">{jmeterScript}</pre>
+                        </div>
+                    </div>
+                </section>
+
+
             </motion.div>
         </div>
     );

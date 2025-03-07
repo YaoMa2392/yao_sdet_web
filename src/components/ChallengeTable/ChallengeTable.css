@@ -1,0 +1,33 @@
+.performance-section4 {
+    /*gap: 40px;*/
+    /*margin-top: 40px;*/
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 50vh; /* 让 section 占据整个视口高度 */
+    padding: 20px; /* 增加一点内边距 */
+}
+
+.performance-section4 .motion-div {
+    max-width: 1200px; /* 最大宽度，避免表格过宽 */
+    width: 100%; /* 宽度为 100% */
+}
+
+
+table {
+    font-size: 1rem;  /* 字体大小，默认16px */
+    table-layout: fixed;  /* 固定表格布局，避免列宽过于自适应 */
+}
+
+thead th {
+    font-size: 1.2rem;  /* 表头字体稍微大一点 */
+}
+
+tbody td {
+    font-size: 1.1rem;    /* 表格内容字体 */
+    padding: 1rem;      /* 行内边距 */
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;  /* 鼠标悬浮效果 */
+}

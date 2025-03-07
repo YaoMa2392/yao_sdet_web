@@ -5,6 +5,7 @@ import analytics1 from "../../../assets/Uptrillion_web.png";
 import analytics2 from "../../../assets/uptrillion_Analytics.png";
 import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
+import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";
 
 export default function CICD() {
     const [inView, setInView] = useState(false);
@@ -59,7 +60,7 @@ export default function CICD() {
             run: ./deploy.sh
   `;
 
-      const jenkinsfileContent = `pipeline {
+    const jenkinsfileContent = `pipeline {
     agent any
 
     triggers {
@@ -117,6 +118,45 @@ export default function CICD() {
     }
 }`;
 
+    const challenges = [
+        {
+            id: 1,
+            challenge: "Flaky Tests",
+            solution: "Analyze logs, implement retry mechanism, optimize wait strategies, and isolate test environments."
+        },
+        {
+            id: 2,
+            challenge: "Long Test Execution Time",
+            solution: "Use test layering, parallel execution, and selective testing based on code changes."
+        },
+        {
+            id: 3,
+            challenge: "Unstable Test Environment",
+            solution: "Utilize Docker/Kubernetes, mock external dependencies, and ensure database consistency."
+        },
+        {
+            id: 4,
+            challenge: "Test Failures After Code Merge",
+            solution: "Run PR-level tests, implement feature toggles, and use static code analysis tools."
+        },
+        {
+            id: 5,
+            challenge: "Test Data Management Issues",
+            solution: "Use data generation tools, database snapshots, and environment isolation techniques."
+        },
+        {
+            id: 6,
+            challenge: "Automation Test Incompatibility with CI/CD",
+            solution: "Standardize test reports, integrate logging tools, and monitor pipeline performance."
+        },
+        {
+            id: 7,
+            challenge: "Excessive CI/CD Triggers",
+            solution: "Optimize trigger conditions and batch commits to reduce pipeline overload."
+        }
+    ];
+
+
     return (
         <div>
             <TitleBar title="CI/CD"/>
@@ -168,8 +208,6 @@ export default function CICD() {
                     />
                 </section>
 
-
-                {/* Product Picture Section */}
                 <section className="cicd-section2">
                     <div className="test-container-githubaction">
                         <div className="code-container-githubaction">
@@ -236,6 +274,9 @@ export default function CICD() {
                             <pre className="test-code-jenkins">{jenkinsfileContent}</pre>
                         </div>
                     </div>
+                </section>
+                <section className="performance-section4">
+                    <ChallengeTable challenges={challenges}/>
                 </section>
             </motion.div>
         </div>
