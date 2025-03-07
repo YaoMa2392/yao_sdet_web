@@ -57,8 +57,7 @@ const AboutMe = () => {
                             PRDs, FRDs.
                         </p>
                         <p className="section-text">
-                            <strong>CI/CD & Tools:</strong> Jira, JMeter, Jenkins, GitHub Actions, GitLab CI, Docker,
-                            Kubernetes.
+                            <strong>CI/CD & Tools:</strong> Jira, Confluence, JMeter, Jenkins, GitHub Actions.
                         </p>
                     </FadeInSection>
 
