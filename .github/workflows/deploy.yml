@@ -27,4 +27,4 @@ jobs:
           branch: gh-pages
           folder: build
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # 使用 GitHub secret 中的 token
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the token secret here
