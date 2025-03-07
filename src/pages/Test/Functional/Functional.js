@@ -1,179 +1,244 @@
 import {motion} from "framer-motion";
 import "./Functional.css";
-import cloud from "../../../assets/uptrillion_cloud.png";
-import React, {useState} from "react";
-import TitleBar from "../../../components/TitleBar/TitleBar";
+import testplan from "../../../assets/Test Plan0.png";
+import analytics from "../../../assets/Uptrillion_web.png";
+import inventory from "../../../assets/uptrillion_inventory1.png";
+import regressionAnalytics from "../../../assets/regression_analytics.png";
+import regressionInventory from "../../../assets/regression_inventory.png";
+import regressionObj from "../../../assets/regression_ObjSco.PNG";
+import regressionApproach from "../../../assets/regression_Approach.PNG";
+import regressionAnalyticsPlan from "../../../assets/regression_analytics_plan.PNG";
+import regressionInventoryPlan from "../../../assets/regression_inventory_plan.PNG"
 
-const FadeInSection = ({children}: { children: React.ReactNode }) => {
-    return (
-        <motion.div
-            initial={{opacity: 0, y: 50}}
-            whileInView={{opacity: 1, y: 0}}
-            viewport={{once: true}}
-            transition={{duration: 0.8, ease: "easeOut"}}
-            className="fade-section"
-        >
-            {children}
-        </motion.div>
-    );
-};
+import React, {useEffect, useState} from "react";
+import TitleBar from "../../../components/TitleBar/TitleBar";
+import Divider from "../../../components/Divider/Divider";
+import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";
+import sales from "../../../assets/uptrillion_sales1.png";
+import sales2 from "../../../assets/uptrillion_sales2.png";
 
 export default function Functional() {
-    const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
+    const [inView, setInView] = useState(false);
 
-    // 处理鼠标位置的变化
-    const handleMouseMove = (e) => {
-        const {clientX: x, clientY: y} = e;
-        setMousePosition({x, y});
+    const handleScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setInView(true);
+                observer.unobserve(entry.target);  // Stop observing once in view
+            }
+        });
     };
 
-    // 设置图片的样式和动画效果
-    const imageStyle = {
-        transform: `translate(${(mousePosition.x - window.innerWidth / 2) / 30}px, ${(mousePosition.y - window.innerHeight / 2) / 30}px)`,
-        transition: 'transform 0.1s ease-out', // 添加平滑效果
-    };
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleScroll, {
+            threshold: 0.5,  // When 50% of the element is visible
+        });
+
+        const images = document.querySelectorAll('.functional-product-section img');
+        images.forEach(image => observer.observe(image));
+
+        return () => {
+            images.forEach(image => observer.unobserve(image)); // Clean up observer
+        };
+    }, []);
+
+    const challenges = [
+        {
+            id: 1,
+            challenge: "Incomplete Test Coverage Due to Time Constraints",
+            solution: "Prioritize test cases based on risk assessment and automate critical functional tests.",
+            result: "Increased test coverage by 35%, reducing critical defects slipping into production by 50%."
+        },
+        {
+            id: 2,
+            challenge: "Frequent Changes in Requirements Affect Test Stability",
+            solution: "Adopt modular test case design and use version control for test scripts.",
+            result: "Reduced test case maintenance effort by 40%, ensuring faster adaptation to requirement changes."
+        },
+        {
+            id: 3,
+            challenge: "Difficulty in Identifying Edge Cases During Testing",
+            solution: "Leverage exploratory testing alongside structured test cases and integrate static analysis tools.",
+            result: "Identified 30% more edge case defects, reducing unexpected failures in production."
+        },
+        {
+            id: 4,
+            challenge: "Manual Functional Testing is Slow and Resource-Intensive",
+            solution: "Automate repetitive functional tests using Selenium, Cypress, or Playwright.",
+            result: "Reduced test execution time by 70%, allowing teams to focus more on exploratory and high-risk testing."
+        },
+        {
+            id: 5,
+            challenge: "Inconsistent Test Execution Across Different Environments",
+            solution: "Utilize containerization and cloud-based testing platforms (e.g., Docker, BrowserStack).",
+            result: "Achieved 90% consistency in test results across multiple environments, reducing environment-related defects by 60%."
+        }
+    ];
+
 
     return (
         <div>
             <TitleBar title="Functional Testing"/>
+            <motion.div
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1}}
+                className="analytics-showcase"
+            >
 
-            <div className="functionality-container" onMouseMove={handleMouseMove}>
-                {/* Hero Section */}
-                <section className="functionality-hero-section">
-                    <motion.img
-                        src={cloud} // 使用图片文件名
-                        alt="Cloud Icon"
-                        className="cloud-icon"
-                        style={imageStyle}
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        transition={{duration: 1, delay: 0.5}}
-                    />
-                </section>
-
-                {/* Product Section */}
-                <section className="functionality-section">
+                <section className="functional-section">
                     <motion.div
-                        className="functionality-description"
+                        className="functional-description"
                         initial={{opacity: 0, x: -50}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1, delay: 0.3}}
                     >
-                        <p><strong>Revolutionizing POS Payments</strong></p>
+                        <p><strong>Functional Testing in Uptrillion POSket App</strong></p>
                         <p>
-                            Uptrillion is a cloud-based payment platform that enables merchants to seamlessly integrate
-                            payment processing directly into their applications. This integration eliminates the need
-                            for
-                            traditional POS terminals and computers, streamlining the payment process and enhancing
-                            operational efficiency. Merchants and resellers can initiate payments directly through the
-                            app,
-                            supporting various payment methods, including tap-to-pay, text-to-pay, and virtual
-                            terminals.
+                            In the POSket app, functional testing confirms that item customization, cart management,
+                            pricing, and checkout work correctly. It is primarily conducted in early development or
+                            small updates, ensuring quick validation before deployment.
                         </p>
-
-                        <p><strong>Key Benefits of Uptrillion:</strong></p>
+                        <p>Key aspects</p>
                         <ul>
-                            <li><strong>Enhanced Sales Efficiency:</strong> Sales representatives can process
-                                transactions
-                                on-site using mobile devices, reducing the sales cycle and increasing conversion rates.
+                            <li><strong>Positive testing</strong>: Verifying that the system functions as intended under
+                                normal conditions (e.g., adding an item to the cart, successful payment).
                             </li>
-                            <li><strong>Operational Streamlining:</strong> By integrating payment processing into
-                                existing
-                                applications, businesses can simplify operations and reduce hardware dependencies.
+                            <li><strong>Negative testing</strong>: Ensuring the system handles invalid inputs or edge
+                                cases properly
+                                (e.g., adding an invalid coupon, invalid payment details).
                             </li>
-                            <li><strong>Comprehensive Payment Support:</strong> Uptrillion supports various payment
-                                methods,
-                                including contactless payments, catering to diverse customer preferences.
+                            <li><strong>Exception testing</strong>: Checking how the system reacts to unexpected
+                                scenarios (e.g., network
+                                failure during checkout).
                             </li>
+
                         </ul>
+
                     </motion.div>
 
-                    {/* 下载 Word 文件的链接 */}
-                    <motion.a
-                        href="/Test Plan for Uptrillion Portal.docx"
-                        download="Yao_TestPlanSample.docx"
-                        className="download-link"
+
+                    <motion.img
+                        src={sales}
+                        alt="Argo System"
+                        className="performance-image"
                         initial={{opacity: 0, x: 50}}
                         animate={{opacity: 1, x: 0}}
                         transition={{duration: 1, delay: 0.5}}
-                    >
-                        Download the Test Plan sample designed by Yao Ma Here.
-                        {/*<img src={download} alt="Download Word" className="word-icon" />*/}
-                    </motion.a>
+                    />
+                    <motion.img
+                        src={sales2}
+                        alt="Argo System"
+                        className="performance-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
+                </section>
 
+                <hr className="divider"/>
+
+                <section className="functional-section2">
+                    <motion.div
+                        className="functional-description"
+                        initial={{opacity: 0, x: -50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.3}}
+                    >
+                        <p><strong>Exclusions: </strong></p>
+                        <p>
+                            Due to non-disclosure constraints and time limitations for this presentation,
+                            the regression testing demonstration is limited to Pax’s publicly available Analytics and
+                            Inventory pages. The core regression testing methodology remains unchanged, and the test
+                            design principles apply consistently across all modules.
+                        </p>
+                    </motion.div>
                 </section>
 
 
-                {/* Core Features Section */}
-                <section className="core-features-section">
-                    <motion.h2
-                        initial={{opacity: 0, y: -30}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 1}}
-                        className="section-title"
-                    >
-                        🚀 Core Features
-                    </motion.h2>
-                    <div className="core-features">
-                        <motion.div
-                            initial={{opacity: 0, y: 50}}
-                            whileInView={{opacity: 1, y: 0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.8, ease: "easeOut"}}
-                            className="core-feature-card"
-                        >
-                            <div className="core-feature-icon">💳</div>
-                            <h3 className="feature-title">Sales & Checkout</h3>
-                            <p className="feature-description">
-                                Streamlined sales process with secure checkout and payment gateway integration.
-                            </p>
-                        </motion.div>
+                <section className="functional-section3">
+                    <motion.img
+                        src={regressionObj}
+                        alt="Argo System"
+                        className="functional-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
 
-                        <motion.div
-                            initial={{opacity: 0, y: 50}}
-                            whileInView={{opacity: 1, y: 0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.8, ease: "easeOut"}}
-                            className="core-feature-card"
-                        >
-                            <div className="core-feature-icon">💰</div>
-                            <h3 className="feature-title">Payment Processing</h3>
-                            <p className="feature-description">
-                                Secure, fast, and reliable payment processing with multiple payment methods.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{opacity: 0, y: 50}}
-                            whileInView={{opacity: 1, y: 0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.8, ease: "easeOut"}}
-                            className="core-feature-card"
-                        >
-                            <div className="core-feature-icon">📦</div>
-                            <h3 className="feature-title">Inventory Management</h3>
-                            <p className="feature-description">
-                                Manage and track your product inventory in real-time for better control.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{opacity: 0, y: 50}}
-                            whileInView={{opacity: 1, y: 0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.8, ease: "easeOut"}}
-                            className="core-feature-card"
-                        >
-                            <div className="core-feature-icon">📊</div>
-                            <h3 className="feature-title">Reporting & Analytics</h3>
-                            <p className="feature-description">
-                                Get insights and analytics to make data-driven decisions and optimize business
-                                performance.
-                            </p>
-                        </motion.div>
-                    </div>
+                    <motion.img
+                        src={regressionApproach}
+                        alt="Argo System"
+                        className="functional-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
                 </section>
-            </div>
+
+                <Divider/>
+
+                <section className="functional-section4">
+                    <motion.div
+                        className="functional-description"
+                        initial={{opacity: 0, x: -50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.3}}
+                    >
+                        <p><strong>Note: </strong></p>
+                        <p>In this regression test plan, all test cases are required to be executed without
+                            prioritization. Bug priority is defined in a separate metrics document to ensure better
+                            clarity and tracking of issue severity.</p>
+                    </motion.div>
+                </section>
+
+                <section className="functional-section5">
+                    <motion.img
+                        src={regressionAnalytics}
+                        alt="Argo System"
+                        className="functional-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
+
+                    <motion.img
+                        src={regressionInventory}
+                        alt="Argo System"
+                        className="functional-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
+                </section>
+
+                <section className="functional-section6">
+                    <motion.img
+                        src={regressionAnalyticsPlan}
+                        alt="Argo System"
+                        className="functional-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
+
+                    <motion.img
+                        src={regressionInventoryPlan}
+                        alt="Argo System"
+                        className="functional-image"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    />
+                </section>
+
+                <Divider/>
+
+                <section className="functional-section7">
+                    <ChallengeTable challenges={challenges}/>
+                </section>
+
+            </motion.div>
         </div>
     );
 }

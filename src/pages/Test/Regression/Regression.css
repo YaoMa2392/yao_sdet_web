@@ -7,14 +7,6 @@
     font-family: "Roboto", Sans-serif;
 }
 
-.divider {
-    border: 0;
-    border-top: 2px solid #ccc; /* 控制分割线的颜色和宽度 */
-    width: 100%;
-    margin: 40px 0; /* 控制分割线上下的间距 */
-}
-
-
 /* 产品展示模块 */
 .regression-section {
     width: 100%;

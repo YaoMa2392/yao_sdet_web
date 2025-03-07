@@ -55,8 +55,8 @@ const Navbar = () => {
                     )}
                 </div>
 
-                <Link to="/Challenges">Challenges</Link>
-                <Link to="/Result">Result</Link>
+                {/*<Link to="/Challenges">Challenges</Link>*/}
+                {/*<Link to="/Result">Result</Link>*/}
                 <Link to="/QA">Q&A</Link>
             </div>
         </div>

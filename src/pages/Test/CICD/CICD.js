@@ -6,6 +6,7 @@ import analytics2 from "../../../assets/uptrillion_Analytics.png";
 import React, {useEffect, useState} from "react";
 import TitleBar from "../../../components/TitleBar/TitleBar";
 import ChallengeTable from "../../../components/ChallengeTable/ChallengeTable";
+import Divider from "../../../components/Divider/Divider";
 
 export default function CICD() {
     const [inView, setInView] = useState(false);
@@ -122,39 +123,47 @@ export default function CICD() {
         {
             id: 1,
             challenge: "Flaky Tests",
-            solution: "Analyze logs, implement retry mechanism, optimize wait strategies, and isolate test environments."
+            solution: "Analyze logs, implement retry mechanism, optimize wait strategies, and isolate test environments.",
+            result: "Reduced flaky test occurrences by 60%, improving pipeline reliability and reducing unnecessary reruns."
         },
         {
             id: 2,
             challenge: "Long Test Execution Time",
-            solution: "Use test layering, parallel execution, and selective testing based on code changes."
+            solution: "Use test layering, parallel execution, and selective testing based on code changes.",
+            result: "Decreased test execution time by 50%, reducing pipeline completion time from 2 hours to under 1 hour."
         },
         {
             id: 3,
             challenge: "Unstable Test Environment",
-            solution: "Utilize Docker/Kubernetes, mock external dependencies, and ensure database consistency."
+            solution: "Utilize Docker/Kubernetes, mock external dependencies, and ensure database consistency.",
+            result: "Improved test environment stability by 80%, reducing environment-related failures and setup time by 70%."
         },
         {
             id: 4,
             challenge: "Test Failures After Code Merge",
-            solution: "Run PR-level tests, implement feature toggles, and use static code analysis tools."
+            solution: "Run PR-level tests, implement feature toggles, and use static code analysis tools.",
+            result: "Reduced post-merge test failures by 40%, improving development efficiency and reducing rollback incidents."
         },
         {
             id: 5,
             challenge: "Test Data Management Issues",
-            solution: "Use data generation tools, database snapshots, and environment isolation techniques."
+            solution: "Use data generation tools, database snapshots, and environment isolation techniques.",
+            result: "Improved test data reliability, reducing test failures due to inconsistent data by 50%."
         },
         {
             id: 6,
             challenge: "Automation Test Incompatibility with CI/CD",
-            solution: "Standardize test reports, integrate logging tools, and monitor pipeline performance."
+            solution: "Standardize test reports, integrate logging tools, and monitor pipeline performance.",
+            result: "Achieved 90% compatibility between automated tests and CI/CD, reducing debugging efforts by 40%."
         },
         {
             id: 7,
             challenge: "Excessive CI/CD Triggers",
-            solution: "Optimize trigger conditions and batch commits to reduce pipeline overload."
+            solution: "Optimize trigger conditions and batch commits to reduce pipeline overload.",
+            result: "Reduced unnecessary pipeline executions by 35%, optimizing resource utilization and speeding up deployment cycles."
         }
     ];
+
 
 
     return (
@@ -208,6 +217,8 @@ export default function CICD() {
                     />
                 </section>
 
+                <Divider />
+
                 <section className="cicd-section2">
                     <div className="test-container-githubaction">
                         <div className="code-container-githubaction">
@@ -239,6 +250,8 @@ export default function CICD() {
                         </ul>
                     </motion.div>
                 </section>
+
+                <Divider />
 
                 <section className="cicd-section2">
                     <motion.div
@@ -275,7 +288,10 @@ export default function CICD() {
                         </div>
                     </div>
                 </section>
-                <section className="performance-section4">
+
+                <Divider />
+
+                <section className="cicd-section4">
                     <ChallengeTable challenges={challenges}/>
                 </section>
             </motion.div>
