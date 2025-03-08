@@ -18,6 +18,7 @@ import Documentation from "./pages/Test/Documentation/Documentation";
 import Performance from "./pages/Test/Performance/Performance";
 import QA from "./pages/Q&A/QA";
 import Presentation from "./pages/Presentation/Presentation";
+import ARGOTesting from "./pages/Test/ARGO Testing/ARGO Testing";
 
 const routes = [
     {
@@ -75,6 +76,10 @@ const routes = [
     {
         path: "/Test/Documentation",
         element: <Documentation/>,
+    },
+    {
+        path: "/Test/ARGOTesting",
+        element: <ARGOTesting/>,
     },
     {
         path: "/QA",

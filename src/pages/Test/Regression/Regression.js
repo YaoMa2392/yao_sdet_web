@@ -162,7 +162,7 @@ public void testImmBtn() {
                     />
                 </section>
 
-                <hr className="divider"/>
+                <Divider />
 
                 <section className="regression-section2">
                     <motion.div

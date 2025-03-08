@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import FadeInWords from "../../components/FadeInWords/FadeInWords";
 
 
 const words = "Feel free to ask any questions!".split(' ');
@@ -14,36 +15,13 @@ const GradientBackground = styled.div`
   padding: 30px;
 `;
 
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-`;
-
-const Word = styled(motion.span)`
-  font-size: 3em;
-  font-weight: bold;
-  color: #333;
-  margin: 0 5px;
-`;
 
 const QA = () => {
+    const words = "Feel free to ask any questions!".split(' '); // Words as input
+
     return (
         <GradientBackground>
-            <TextContainer>
-                {words.map((word, index) => (
-                    <Word
-                        key={index}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5 * index }}
-                    >
-                        {word}
-                    </Word>
-                ))}
-            </TextContainer>
+            <FadeInWords words={words} /> {/* Pass words to the FadeInWords component */}
         </GradientBackground>
     );
 };

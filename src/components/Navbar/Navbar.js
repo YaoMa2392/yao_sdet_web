@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="navbar-logo">
                 <Link to="/alamar-pres">
-                    <img src={logo} alt="Alamar Logo" className="logo"/>
+                    <img src={logo} alt="ARGOTesting Logo" className="logo"/>
                 </Link>
             </div>
             <div className="navbar-links">
@@ -46,6 +46,7 @@ const Navbar = () => {
                             <Link to="/Test/Performance">Performance Testing</Link>
                             <Link to="/Test/CICD">CI/CD</Link>
                             <Link to="/Test/Documentation">Documentation</Link>
+                            <Link to="/Test/ARGOTesting">ARGO Testing</Link>
                         </div>
                     )}
                 </div>
