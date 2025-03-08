@@ -30,7 +30,7 @@
     position: absolute;
     top: 30%;
     left: 36%;
-    color: #407EC9;
+    color: #1C3775;
     /*transform: translate(-50%, -50%);*/
 }
 
@@ -61,22 +61,22 @@
     /*color: transparent;*/
     /*transition: transform 0.3s ease, color 0.3s ease;*/
     transform: scale(1.1);
-    color: #407EC9;
+    color: #1C3775;
 }
 
 .section-text {
     font-size: 1.2rem;
-    color: #407EC9;
+    color: #1C3775;
     transition: color 0.3s ease;
 }
 
-.section-text:hover {
-    color: #1C3775;
-    transform: scale(1.2);
-    box-shadow: 0px 0px 30px rgba(28, 55, 117, 0.5);
-    text-shadow: 0 0 10px rgba(28, 55, 117, 0.8);
+/*.section-text:hover {*/
+/*    color: #1C3775;*/
+/*    transform: scale(1.2);*/
+/*    box-shadow: 0px 0px 30px rgba(28, 55, 117, 0.5);*/
+/*    text-shadow: 0 0 10px rgba(28, 55, 117, 0.8);*/
 
-}
+/*}*/
 
 .fade-section {
     margin-bottom: 50px;

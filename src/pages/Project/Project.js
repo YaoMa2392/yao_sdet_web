@@ -6,6 +6,7 @@ import mobile from "../../assets/uptrillion_mobile.jpg";
 import cloud from "../../assets/uptrillion_cloud.png";
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import testTypes from "../../assets/testTypesDiagram.PNG";
 
 const FadeInSection = ({children}: { children: React.ReactNode }) => {
     return (
@@ -185,6 +186,17 @@ export default function Project() {
                             </p>
                         </motion.div>
                     </Link>
+                </div>
+            </section>
+
+            {/* Project Details */}
+            <section className="content-section">
+                <FadeInSection>
+                    <h2 className="project-section-title center-title">🎯 Types of Testing Applied at Uptrillion</h2>
+                </FadeInSection>
+
+                <div className="project-image-container-testTpes">
+                        <img src={testTypes} alt="Project screenshot 2" className="project-image-testTypes"/>
                 </div>
             </section>
         </div>

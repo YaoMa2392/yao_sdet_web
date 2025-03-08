@@ -103,7 +103,7 @@
     /*background: linear-gradient(135deg, #1D3557, #407EC9); !* Gradient Background *!*/
 }
 
-/* 图片部分 */
+
 .project-image-container {
     display: flex;
     justify-content: space-between;
@@ -147,4 +147,18 @@
 /* 滚动渐入动画 */
 .fade-section {
     margin-bottom: 50px;
+}
+
+.project-image-container-testTpes {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;     /* Vertically center the image (if necessary) */
+    width: 100%;
+    padding: 20px 0;
+}
+
+.project-image-testTypes {
+    max-width: 100%; /* Ensure the image is responsive */
+    width: 820px;
+    height: auto;    /* Maintain aspect ratio */
 }
