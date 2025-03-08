@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/alamar_logo.webp"; // 导入logo图片
+import logo from "../../assets/alamar_logo.webp";
 
 const Navbar = () => {
     const [testMenuOpen, setTestMenuOpen] = useState(false);
@@ -15,9 +15,6 @@ const Navbar = () => {
             </div>
             <div className="navbar-links">
                 <Link to="/AboutMe">About Me</Link>
-                {/*<Link to="/Project">Project</Link>*/}
-
-                {/* 分级菜单：Project */}
                 <div
                     className="dropdown"
                     onMouseEnter={() => setTestMenuOpen(true)}
@@ -26,7 +23,6 @@ const Navbar = () => {
                     <Link to="/Project" className="dropdown-title">Project</Link>
                     {testMenuOpen && (
                         <div className="dropdown-menu">
-                            {/*<Link to="/test/workflow">Workflow</Link>*/}
                             <Link to="/Project/Sales">Sales</Link>
                             <Link to="/Project/Payment">Payment</Link>
                             <Link to="/Project/Inventory">Inventory</Link>
@@ -35,7 +31,6 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/* 分级菜单：Test */}
                 <div
                     className="dropdown"
                     onMouseEnter={() => setTestMenuOpen(true)}
@@ -55,8 +50,6 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/*<Link to="/Challenges">Challenges</Link>*/}
-                {/*<Link to="/Result">Result</Link>*/}
                 <Link to="/QA">Q&A</Link>
             </div>
         </div>

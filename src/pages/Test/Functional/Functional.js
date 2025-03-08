@@ -108,7 +108,6 @@ export default function Functional() {
 
                     </motion.div>
 
-
                     <motion.img
                         src={sales}
                         alt="Argo System"
@@ -132,7 +131,6 @@ export default function Functional() {
                 <section className="functional-section7">
                     <ChallengeTable challenges={challenges}/>
                 </section>
-
             </motion.div>
         </div>
     );

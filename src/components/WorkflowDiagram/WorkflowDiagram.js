@@ -28,7 +28,6 @@ const WorkflowDiagram = () => {
   const onNodeHover = (event, node) => {
     setHoveredNode(node);
 
-    // 让tooltip显示在节点的上方，偏移10px（可以根据需要调整）
     setTooltipPosition({
       x: node.position.x ,  // 10px to the right of the node
       y: node.position.y - 100,  // 40px above the node (or adjust as needed)

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';  // 引入样式文件
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -8,7 +8,6 @@ const Footer = () => {
         {/* Left side: Logo image */}
         <div className="footer-logo">
             YAO MA
-          {/*<img src="https://via.placeholder.com/150" alt="Logo" />*/}
         </div>
 
         {/* Right side: Contact Info */}

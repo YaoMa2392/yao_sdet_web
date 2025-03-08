@@ -6,12 +6,11 @@
     /*border: 2px solid red; !* 添加红色边框 *!*/
 }
 
-/* 为了保持宽度一致，使用与 ProjectIntro 相同的布局 */
 .page-content {
     width: 100%;
-    max-width: 1200px; /* 保持一致 */
-    padding: 0 20px; /* 左右 padding */
-    margin: 0 auto; /* 保证内容居中 */
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 /* Hero Section */
@@ -26,7 +25,6 @@
     /*border: 2px solid red; !* 添加红色边框 *!*/
 }
 
-/* 标题样式 */
 .aboutme-hero-title {
     font-size: 6em;
     position: absolute;
@@ -37,7 +35,6 @@
 }
 
 
-/* WordCloud 样式 */
 .hero-section > .word-cloud {
     position: absolute;
     top: 50%;
@@ -48,7 +45,6 @@
     max-width: 80%;
 }
 
-/* 内容部分 */
 .content-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -56,7 +52,6 @@
     position: relative;
 }
 
-/* Section标题 */
 .section-title {
     font-size: 2rem;
     font-weight: bold;
@@ -69,13 +64,6 @@
     color: #407EC9;
 }
 
-
-/*.section-title:hover {*/
-/*    transform: scale(1.1);*/
-/*    color: #FFCE00;*/
-/*}*/
-
-/* 文本样式 */
 .section-text {
     font-size: 1.2rem;
     color: #407EC9;
@@ -84,14 +72,12 @@
 
 .section-text:hover {
     color: #1C3775;
-    /* color: #FF9E00; !* 悬浮时的颜色 *! */
-    transform: scale(1.2); /* 放大效果 */
-    box-shadow: 0px 0px 30px rgba(28, 55, 117, 0.5); /* 贴合深蓝色的阴影 */
-    text-shadow: 0 0 10px rgba(28, 55, 117, 0.8); /* 贴合深蓝色的发光效果 */
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px rgba(28, 55, 117, 0.5);
+    text-shadow: 0 0 10px rgba(28, 55, 117, 0.8);
 
 }
 
-/* 滚动渐入动画 */
 .fade-section {
     margin-bottom: 50px;
     opacity: 0;
@@ -110,7 +96,6 @@
     }
 }
 
-/* 响应式适配 */
 @media (max-width: 768px) {
     .section-title {
         font-size: 1.5rem;

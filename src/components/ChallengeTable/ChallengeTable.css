@@ -1,33 +1,32 @@
 .performance-section4 {
-    /*gap: 40px;*/
-    /*margin-top: 40px;*/
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    height: 50vh; /* 让 section 占据整个视口高度 */
-    padding: 20px; /* 增加一点内边距 */
+    /* gap: 40px; */
+    /* margin-top: 40px; */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 50vh; /* Make the section occupy the full viewport height */
+    padding: 20px; /* Add some padding */
 }
 
 .performance-section4 .motion-div {
-    max-width: 1200px; /* 最大宽度，避免表格过宽 */
-    width: 100%; /* 宽度为 100% */
+    max-width: 1200px; /* Maximum width, to prevent the table from becoming too wide */
+    width: 100%; /* Width set to 100% */
 }
 
-
 table {
-    font-size: 1rem;  /* 字体大小，默认16px */
-    table-layout: fixed;  /* 固定表格布局，避免列宽过于自适应 */
+    font-size: 1rem;  /* Font size, default 16px */
+    table-layout: fixed;  /* Fixed table layout, prevents column widths from adjusting too flexibly */
 }
 
 thead th {
-    font-size: 1.1rem;  /* 表头字体稍微大一点 */
+    font-size: 1.1rem;  /* Slightly larger font size for the table header */
 }
 
 tbody td {
-    font-size: 1rem;    /* 表格内容字体 */
-    padding: 1rem;      /* 行内边距 */
+    font-size: 1rem;    /* Font size for table content */
+    padding: 1rem;      /* Padding within rows */
 }
 
 tbody tr:hover {
-    background-color: #f9f9f9;  /* 鼠标悬浮效果 */
+    background-color: #f9f9f9;  /* Hover effect for table rows */
 }

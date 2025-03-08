@@ -80,19 +80,6 @@ export default function Documentation() {
                 transition={{duration: 1}}
                 className="analytics-showcase"
             >
-
-                {/*<section className="regression-section2">*/}
-                {/*    <motion.div*/}
-                {/*        className="regression-description"*/}
-                {/*        initial={{opacity: 0, x: -50}}*/}
-                {/*        animate={{opacity: 1, x: 0}}*/}
-                {/*        transition={{duration: 1, delay: 0.3}}*/}
-                {/*    >*/}
-                {/*        <p><strong>Test Plan</strong></p>*/}
-                {/*    </motion.div>*/}
-                {/*</section>*/}
-
-
                 <section className="regression-section3">
                     <motion.img
                         src={documentPlan}
@@ -162,7 +149,6 @@ export default function Documentation() {
                 <section className="regression-section7">
                     <ChallengeTable challenges={challenges} />
                 </section>
-
             </motion.div>
         </div>
     );

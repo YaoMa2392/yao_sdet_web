@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* Global Styles */
 .workflow-showcase {
     width: 100%;
     max-width: 1200px;
@@ -6,15 +6,6 @@
     padding: 30px 20px;
 }
 
-
-/* 产品展示模块 */
-.inventory-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 60px;
-}
 .workflow-section {
     display: flex;
     align-items: center;
@@ -23,26 +14,10 @@
     /*margin-top: 10px;*/
 }
 
-.inventory-description {
-    flex: 1;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-}
-.inventory-pic{
-    flex: 1;
-    width: 400px; /* 这里设置固定宽度 */
-    height: auto;
-    max-width: 100%; /* 确保不会超出父容器 */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 .workflow-sdet-image {
     flex: 1;
-    /*width: 20px; !* 这里设置固定宽度 *!*/
     height: 760px;
-    max-width: 100%; /* 确保不会超出父容器 */
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -50,15 +25,12 @@
 
 .workflow-test-image {
     flex: 1;
-    /*width: 400px; !* 这里设置固定宽度 *!*/
     height: 760px;
-    max-width: 100%; /* 确保不会超出父容器 */
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-
-
 
 /* Modal Overlay */
 .modal-overlay {
@@ -101,19 +73,16 @@
     cursor: pointer;
 }
 
-
-/* 响应式设计 */
 @media (max-width: 768px) {
     .workflow-sdet-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%;
+        max-width: 300px;
     }
 }
 
-/* 响应式设计 */
 @media (max-width: 768px) {
     .workflow-test-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%;
+        max-width: 300px;
     }
 }

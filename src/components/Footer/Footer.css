@@ -4,19 +4,19 @@
   padding: 20px 0;
   display: flex;
   justify-content: center;
-  opacity: 0; /* 初始为透明 */
-  animation: fadeIn 2s forwards; /* 渐变动画 */
+  opacity: 0; /* Initially transparent */
+  animation: fadeIn 2s forwards; /* Fade-in animation */
   font-family: "Roboto", Sans-serif;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* 从下方出现 */
+    transform: translateY(20px); /* Appears from below */
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* 完全显示 */
+    transform: translateY(0); /* Fully visible */
   }
 }
 
@@ -29,10 +29,10 @@
 }
 
 .footer-logo {
-  /*width: 150px; !* 调整 logo 图片的大小 *!*/
-  /*height: auto;*/
-    font-size: 4rem;
-    font-weight: bold;
+  /* width: 150px; /* Adjust the logo image size */
+  /* height: auto; */
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 .footer-contact {

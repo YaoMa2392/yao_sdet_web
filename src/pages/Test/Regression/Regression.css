@@ -1,5 +1,5 @@
-/* 全局样式 */
-.analytics-showcase {
+/* Global Styles */
+.regression-showcase {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -7,7 +7,6 @@
     font-family: "Roboto", Sans-serif;
 }
 
-/* 产品展示模块 */
 .regression-section {
     width: 100%;
     display: flex;
@@ -40,21 +39,21 @@
 
 
 .regression-image {
-    width: 600px; /* 设置固定宽度 */
+    width: 600px;
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     /*margin-top: 10px;*/
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;
+    /*margin-right: 20px;*/
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
     .regression-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%;
+        max-width: 300px;
     }
 }
 
@@ -77,14 +76,14 @@
 .left-images {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* 控制上下间距 */
+    gap: 10px;
 }
 
 .regression-image-right {
-    width: 600px; /* 调整大小以适应布局 */
+    width: 600px;
     height: auto;
     max-width: 100%;
-    /*max-width: 300px; !* 你可以调整这个值 *!*/
+    /*max-width: 300px; */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }

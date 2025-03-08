@@ -2,9 +2,9 @@
     background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%);
     padding: 60px 0;
     display: flex;
-    justify-content: center; /* 保持居中对齐 */
-    opacity: 0; /* 初始为透明 */
-    animation: fadeIn 2s forwards; /* 渐变动画 */
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {
@@ -14,23 +14,22 @@
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* 完全显示 */
+        transform: translateY(0);
     }
 }
 
 .titlebar-container {
     display: flex;
-    justify-content: center; /* 保持内容居中 */
-    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    align-items: center;
     width: 80%;
     max-width: 1200px;
 }
 
 .title {
-    /*font-size: 36px;  !* 调整标题字体大小 *!*/
     margin: 0;
-    text-align: left; /* 内容左对齐 */
-    width: 100%; /* 确保文字从左边开始 */
+    text-align: left;
+    width: 100%;
     font-size: 4rem;
     font-weight: lighter;
     font-family: "Roboto", Sans-serif;

@@ -48,9 +48,9 @@
 }
 
 .project-section-title {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .core-features {
@@ -64,7 +64,7 @@
     background-color: #407EC9;
     padding: 30px;
     border-radius: 10px;
-    width: 250px;
+    width: 420px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;

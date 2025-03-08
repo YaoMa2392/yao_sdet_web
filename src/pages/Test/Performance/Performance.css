@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* layout */
 .performance-showcase {
     width: 100%;
     max-width: 1200px;
@@ -7,8 +7,6 @@
     font-family: "Roboto", Sans-serif;
 }
 
-
-/* 产品展示模块 */
 .performance-section {
     width: 100%;
     display: flex;
@@ -16,9 +14,9 @@
     justify-content: space-between;
     gap: 40px;
     /*margin-top: 180px;*/
-    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*position: relative; */
     /*top: 50%;*/
-    /*border: 2px solid red; !* 添加红色边框 *!*/
+    /*border: 2px solid red; !* Add red border *!*/
 }
 
 .performance-section1 {
@@ -32,66 +30,66 @@
 .performance-section2 {
     gap: 40px;
     margin-top: 260px;
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    height: 60vh; /* 让 section 占据整个视口高度 */
-    padding: 20px; /* 增加一点内边距 */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Make the section occupy the entire viewport height */
+    padding: 20px; /* Add some padding */
     margin-bottom: 260px;
 }
 .performance-section3 {
     gap: 40px;
     margin-top: 200px;
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    height: 60vh; /* 让 section 占据整个视口高度 */
-    padding: 20px; /* 增加一点内边距 */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Make the section occupy the entire viewport height */
+    padding: 20px; /* Add some padding */
 }
 
 
 .performance-section4 {
     /*gap: 40px;*/
     margin-top: 10px;
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    height: 50vh; /* 让 section 占据整个视口高度 */
-    padding: 20px; /* 增加一点内边距 */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50vh; /* Make the section occupy the entire viewport height */
+    padding: 20px; /* Add some padding */
 }
 
 .performance-section4 .motion-div {
-    max-width: 1200px; /* 最大宽度，避免表格过宽 */
-    width: 100%; /* 宽度为 100% */
+    max-width: 1200px; /* Max width to avoid the table being too wide */
+    width: 100%; /* Width is 100% */
 }
 
 
 .performance-section5 {
     gap: 40px;
     margin-top: 120px;
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    height: 60vh; /* 让 section 占据整个视口高度 */
-    padding: 20px; /* 增加一点内边距 */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Make the section occupy the entire viewport height */
+    padding: 20px; /* Add some padding */
 }
 
 table {
-    font-size: 1rem;  /* 字体大小，默认16px */
-    table-layout: fixed;  /* 固定表格布局，避免列宽过于自适应 */
+    font-size: 1rem;  /* Font size, default is 16px */
+    table-layout: fixed;  /* Fixed table layout to avoid columns being too flexible */
 }
 
 thead th {
-    font-size: 1.2rem;  /* 表头字体稍微大一点 */
+    font-size: 1.2rem;  /* Slightly larger font size for table headers */
 }
 
 tbody td {
-    font-size: 1.1rem;    /* 表格内容字体 */
-    padding: 1rem;      /* 行内边距 */
+    font-size: 1.1rem;    /* Font size for table content */
+    padding: 1rem;      /* Padding within rows */
 }
 
 tbody tr:hover {
-    background-color: #f9f9f9;  /* 鼠标悬浮效果 */
+    background-color: #f9f9f9;  /* Hover effect */
 }
 
 .test-container-githubaction {
@@ -128,11 +126,11 @@ h1 {
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    height: 600px; /* 固定高度 */
-    /*border: 1px solid #ccc; !* 增加边框 *!*/
+    height: 600px; /* Fixed height */
+    /*border: 1px solid #ccc; !* Add border *!*/
     border-radius: 8px;
-    /*background-color: #1e1e1e; !* 让整体背景颜色深色更协调 *!*/
-    overflow: hidden; /* 避免溢出 */
+    /*background-color: #1e1e1e; !* Darker background color for better coordination *!*/
+    overflow: hidden; /* Prevent overflow */
 }
 
 .code-container-jenkins {
@@ -140,10 +138,9 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    height: 100%; /* 让它填充整个 test-container */
+    height: 100%; /* Make it fill the entire test-container */
     display: flex;
     flex-direction: column;
-
 }
 
 .test-code-jenkins {
@@ -154,9 +151,8 @@ h1 {
     border-radius: 5px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    max-height: 540px; /* 限制代码区域的高度 */
-    overflow: auto; /* 添加滚动条 */
-
+    max-height: 540px; /* Limit the code area's height */
+    overflow: auto; /* Add scrollbars */
 }
 
 
@@ -168,51 +164,51 @@ h1 {
 }
 
 .performance-image {
-    width: 360px; /* 设置固定宽度 */
+    width: 360px; /* Set fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;  !* Adjust left margin of the image *!*/
+    /*margin-right: 20px; !* Adjust right margin of the image *!*/
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .performance-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Adjust for smaller screens */
+        max-width: 300px; /* Limit the maximum width */
     }
 }
 
 
 .performance-image-diagram {
-    width: 500px; /* 设置固定宽度 */
+    width: 500px; /* Set fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;  !* Adjust left margin of the image *!*/
+    /*margin-right: 20px; !* Adjust right margin of the image *!*/
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .performance-image-diagram {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Adjust for smaller screens */
+        max-width: 300px; /* Limit the maximum width */
     }
 }
 
 .api-code {
-  background-color: #f1f1f1;  /* 灰色背景 */
-  padding: 0.8rem;              /* 为代码添加内边距 */
-  border-radius: 5px;         /* 圆角效果 */
-  font-family: 'Courier New', Courier, monospace; /* 使用等宽字体 */
-  font-size: 0.8rem;          /* 设置字体大小 */
-  color: #333;                /* 字体颜色 */
-  overflow-x: auto;           /* 让代码在过长时可以横向滚动 */
-  word-wrap: break-word;      /* 自动换行 */
+    background-color: #f1f1f1;  /* Gray background */
+    padding: 0.8rem;              /* Add padding around the code */
+    border-radius: 5px;         /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Use monospaced font */
+    font-size: 0.8rem;          /* Set font size */
+    color: #333;                /* Font color */
+    overflow-x: auto;           /* Allow horizontal scrolling for long code */
+    word-wrap: break-word;      /* Auto wrap words */
 }
 
 .regression-image-report {
@@ -222,7 +218,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-left: auto;  /* Automatically adjusts left margin */
-    margin-right: auto; /* Automatically adjusts right margin */
+    margin-left: auto;  /* Automatically adjust left margin */
+    margin-right: auto; /* Automatically adjust right margin */
     display: block;     /* Make the image a block element to center it */
 }

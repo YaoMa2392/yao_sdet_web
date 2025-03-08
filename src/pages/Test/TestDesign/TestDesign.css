@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* Global Styles */
 .design-showcase {
     width: 100%;
     max-width: 1200px;
@@ -7,8 +7,6 @@
     font-family: "Roboto", Sans-serif;
 }
 
-
-/* 产品展示模块 */
 .design-section {
     width: 100%;
     display: flex;
@@ -16,7 +14,7 @@
     justify-content: space-between;
     gap: 40px;
     /*margin-top: 180px;*/
-    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*position: relative;*/
     /*top: 50%;*/
     /*border: 2px solid red; !* 添加红色边框 *!*/
 }
@@ -37,47 +35,25 @@
     color: #333;
 }
 
-/*.design-image {*/
-/*    width: 600px; !* 设置固定宽度 *!*/
-/*    height: auto;*/
-/*    max-width: 100%;*/
-/*    border-radius: 10px;*/
-/*    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
-/*    !*margin-left: 200px;  !* 调整图片左边距 *!*!*/
-/*    !*margin-right: 20px; !* 调整图片右边距 *!*!*/
-/*}*/
-
-/*!* 响应式设计 *!*/
-/*@media (max-width: 768px) {*/
-/*    .design-image {*/
-/*        width: 100%; !* 在小屏幕上适应 *!*/
-/*        max-width: 300px; !* 限制最大宽度 *!*/
-/*    }*/
-/*}*/
-
-
 .design-pic {
-    width: auto; /* 设置固定宽度 */
+    width: auto;
     height: 700px;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
     cursor: pointer;
 }
 
 
 .design-image {
     flex: 1;
-    width: 400px; /* 这里设置固定宽度 */
+    width: 400px;
     height: auto;
-    max-width: 100%; /* 确保不会超出父容器 */
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-
 
 /* Modal Overlay */
 .modal-overlay {
@@ -120,12 +96,10 @@
     cursor: pointer;
 }
 
-
-/* 响应式设计 */
 @media (max-width: 800px) {
     .design-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%;
+        max-width: 300px;
     }
 }
 

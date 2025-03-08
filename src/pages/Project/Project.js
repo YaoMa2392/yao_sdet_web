@@ -5,6 +5,7 @@ import web from "../../assets/uptrillion_web.jpg";
 import mobile from "../../assets/uptrillion_mobile.jpg";
 import cloud from "../../assets/uptrillion_cloud.png";
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
 const FadeInSection = ({children}: { children: React.ReactNode }) => {
     return (
@@ -23,16 +24,16 @@ const FadeInSection = ({children}: { children: React.ReactNode }) => {
 export default function Project() {
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
 
-    // 处理鼠标位置的变化
+    // Handle changes in mouse position
     const handleMouseMove = (e) => {
         const {clientX: x, clientY: y} = e;
         setMousePosition({x, y});
     };
 
-    // 设置图片的样式和动画效果
+    // Set styles and animation effects for images
     const imageStyle = {
         transform: `translate(${(mousePosition.x - window.innerWidth / 2) / 30}px, ${(mousePosition.y - window.innerHeight / 2) / 30}px)`,
-        transition: 'transform 0.1s ease-out', // 添加平滑效果
+        transition: 'transform 0.1s ease-out', // Add smooth transition effect
     };
 
     return (
@@ -45,7 +46,6 @@ export default function Project() {
                     transition={{duration: 1}}
                     className="hero-title"
                 >
-
                     Uptrillion
                 </motion.h1>
                 <motion.p
@@ -57,7 +57,7 @@ export default function Project() {
                     The Cloud Commerce Platform
                 </motion.p>
                 <motion.img
-                    src={cloud} // 使用图片文件名
+                    src={cloud} // Use the image filename
                     alt="Cloud Icon"
                     className="cloud-icon"
                     style={imageStyle}
@@ -66,7 +66,6 @@ export default function Project() {
                     transition={{duration: 1, delay: 0.5}}
                 />
             </section>
-
 
             {/* Project Details */}
             <section className="content-section">
@@ -83,7 +82,7 @@ export default function Project() {
                     </p>
                 </FadeInSection>
 
-                {/* 图片展示部分 */}
+                {/* Image Display Section */}
                 <div className="project-image-container">
                     <a href="https://www.uptrillion.com/" target="_blank" rel="noopener noreferrer">
                         <img src={web} alt="Project screenshot 1" className="project-image-uptrillion"/>
@@ -96,7 +95,6 @@ export default function Project() {
                 </div>
             </section>
 
-
             {/* Core Features Section */}
             <section className="core-features-section">
                 <motion.h2
@@ -108,81 +106,85 @@ export default function Project() {
                     🚀 Core Features
                 </motion.h2>
                 <div className="core-features">
-                    <motion.div
-                        initial={{opacity: 0, y: 50}}
-                        whileInView={{opacity: 1, y: 0}}
-                        viewport={{once: true}}
-                        transition={{duration: 0.8, ease: "easeOut"}}
-                        className="core-feature-card"
-                        whileHover={{
-                            scale: 1.1, // 放大效果
-                            transition: {type: "spring", stiffness: 300} // 弹性动画
-                        }}
-                        onClick={() => window.location.href = "/Project/Sales"} // 点击跳转到Sales页面
-                    >
-                        <div className="core-feature-icon">💳</div>
-                        <h3 className="feature-title">Sales & Checkout</h3>
-                        <p className="feature-description">
-                            Streamlined sales process with secure checkout and payment gateway integration.
-                        </p>
-                    </motion.div>
+                    <Link to="/Project/Sales" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.8, ease: "easeOut"}}
+                            className="core-feature-card"
+                            whileHover={{
+                                scale: 1.1, // Zoom effect
+                                transition: {type: "spring", stiffness: 300} // Spring animation
+                            }}
+                        >
+                            <div className="core-feature-icon">💳</div>
+                            <h3 className="feature-title">Sales & Checkout</h3>
+                            <p className="feature-description">
+                                Streamlined sales process with secure checkout and payment gateway integration.
+                            </p>
+                        </motion.div>
+                    </Link>
 
-                    <motion.div
-                        initial={{opacity: 0, y: 50}}
-                        whileInView={{opacity: 1, y: 0}}
-                        viewport={{once: true}}
-                        transition={{duration: 0.8, ease: "easeOut"}}
-                        className="core-feature-card"
-                        whileHover={{
-                            scale: 1.1, // 放大效果
-                            transition: {type: "spring", stiffness: 300}
-                        }}
-                        onClick={() => window.location.href = "/Project/Payment"} // 点击跳转到Payment页面
-                    >
-                        <div className="core-feature-icon">💰</div>
-                        <h3 className="feature-title">Payment Processing</h3>
-                        <p className="feature-description">
-                            Secure, fast, and reliable payment processing with multiple payment methods.
-                        </p>
-                    </motion.div>
+                    <Link to="/Project/Payment" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.8, ease: "easeOut"}}
+                            className="core-feature-card"
+                            whileHover={{
+                                scale: 1.1, // Zoom effect
+                                transition: {type: "spring", stiffness: 300}
+                            }}
+                        >
+                            <div className="core-feature-icon">💰</div>
+                            <h3 className="feature-title">Payment Processing</h3>
+                            <p className="feature-description">
+                                Secure, fast, and reliable payment processing with multiple payment methods.
+                            </p>
+                        </motion.div>
+                    </Link>
 
-                    <motion.div
-                        initial={{opacity: 0, y: 50}}
-                        whileInView={{opacity: 1, y: 0}}
-                        viewport={{once: true}}
-                        transition={{duration: 0.8, ease: "easeOut"}}
-                        className="core-feature-card"
-                        whileHover={{
-                            scale: 1.1, // 放大效果
-                            transition: {type: "spring", stiffness: 300}
-                        }}
-                        onClick={() => window.location.href = "/Project/Inventory"} // 点击跳转到Inventory页面
-                    >
-                        <div className="core-feature-icon">📦</div>
-                        <h3 className="feature-title">Inventory Management</h3>
-                        <p className="feature-description">
-                            Manage and track your product inventory in real-time for better control.
-                        </p>
-                    </motion.div>
+                    <Link to="/Project/Inventory" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.8, ease: "easeOut"}}
+                            className="core-feature-card"
+                            whileHover={{
+                                scale: 1.1, // Zoom effect
+                                transition: {type: "spring", stiffness: 300}
+                            }}
+                        >
+                            <div className="core-feature-icon">📦</div>
+                            <h3 className="feature-title">Inventory Management</h3>
+                            <p className="feature-description">
+                                Manage and track your product inventory in real-time for better control.
+                            </p>
+                        </motion.div>
+                    </Link>
 
-                    <motion.div
-                        initial={{opacity: 0, y: 50}}
-                        whileInView={{opacity: 1, y: 0}}
-                        viewport={{once: true}}
-                        transition={{duration: 0.8, ease: "easeOut"}}
-                        className="core-feature-card"
-                        whileHover={{
-                            scale: 1.1, // 放大效果
-                            transition: {type: "spring", stiffness: 300}
-                        }}
-                        onClick={() => window.location.href = "/Project/Analytics"} // 点击跳转到Reporting页面
-                    >
-                        <div className="core-feature-icon">📊</div>
-                        <h3 className="feature-title">Reporting & Analytics</h3>
-                        <p className="feature-description">
-                            Get insights and analytics to make data-driven decisions and optimize business performance.
-                        </p>
-                    </motion.div>
+                    <Link to="/Project/Analytics" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.8, ease: "easeOut"}}
+                            className="core-feature-card"
+                            whileHover={{
+                                scale: 1.1, // Zoom effect
+                                transition: {type: "spring", stiffness: 300}
+                            }}
+                        >
+                            <div className="core-feature-icon">📊</div>
+                            <h3 className="feature-title">Reporting & Analytics</h3>
+                            <p className="feature-description">
+                                Get insights and analytics to make data-driven decisions and optimize business performance.
+                            </p>
+                        </motion.div>
+                    </Link>
                 </div>
             </section>
         </div>

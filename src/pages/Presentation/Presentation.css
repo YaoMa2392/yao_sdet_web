@@ -4,6 +4,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
+    font-family: "Roboto", Sans-serif;
 }
 
 .presentation-section {
@@ -17,7 +18,8 @@
 .presentation-image {
     flex: 1;
     /*width: 400px; !* 这里设置固定宽度 *!*/
-    height: 760px;
+    height: 680px;
+    width: auto;
     max-width: 100%; /* 确保不会超出父容器 */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);

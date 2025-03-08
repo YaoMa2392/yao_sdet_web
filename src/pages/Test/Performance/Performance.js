@@ -78,7 +78,6 @@ export default function Performance() {
                 transition={{duration: 1}}
                 className="performance-showcase"
             >
-
                 <section className="performance-section1">
                     <motion.div
                         className="performance-description"
@@ -198,19 +197,6 @@ export default function Performance() {
                 <section className="performance-section4">
                     <ChallengeTable challenges={challenges}/>
                 </section>
-
-                {/*<Divider />*/}
-
-                {/*<section className="performance-section3">*/}
-                {/*    <div className="test-container-githubaction">*/}
-                {/*        <div className="code-container-githubaction">*/}
-                {/*            <h2>./performance/payment-stress-test.jmx</h2>*/}
-                {/*            <pre className="test-code-githubaction">{jmeterScript}</pre>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
-
-
             </motion.div>
         </div>
     );

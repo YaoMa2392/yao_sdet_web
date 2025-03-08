@@ -31,7 +31,6 @@ function Workflow() {
                 className="workflow-showcase"
             >
 
-                {/* Inventory Images Section */}
                 <section className="workflow-section">
                     <motion.img
                         src={testDiagram}

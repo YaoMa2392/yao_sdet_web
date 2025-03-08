@@ -1,16 +1,17 @@
-/* 全局样式 */
+/* Global Styles */
 .sales-showcase {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
+    font-family: "Roboto", Sans-serif;
 }
 
-/* 头部标题 */
+/* Header Title */
 .sales-header {
     text-align: center;
     margin-bottom: 40px;
-    /*border: 2px solid red; !* 添加红色边框 *!*/
+    /*border: 2px solid red; !* Add red border *!*/
 }
 
 .sales-title {
@@ -28,7 +29,7 @@
     margin: 0 auto;
 }
 
-/* 产品展示模块 */
+/* Product Display Section */
 .sales-section {
     display: flex;
     align-items: center;
@@ -53,26 +54,25 @@
 
 .sales-image {
     flex: 1;
-    width: 400px; /* 这里设置固定宽度 */
+    width: 400px; /* Set fixed width here */
     height: auto;
-    max-width: 100%; /* 确保不会超出父容器 */
+    max-width: 100%; /* Ensure it does not exceed parent container */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sales-image {
-    width: 360px; /* 设置固定宽度 */
+    width: 360px; /* Set fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 响应式设计 */
+/* Responsive Design */
 @media (max-width: 768px) {
     .sales-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Adapt to small screens */
+        max-width: 300px; /* Limit maximum width */
     }
 }
-

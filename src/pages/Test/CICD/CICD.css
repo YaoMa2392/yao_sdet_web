@@ -1,16 +1,17 @@
-/* 全局样式 */
-.analytics-showcase {
+/* Global Styles */
+.cicd-showcase {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
+    font-family: "Roboto", Sans-serif;
 }
 
-/* 头部标题 */
+/* Header Title */
 .analytics-header {
     text-align: center;
     margin-bottom: 40px;
-    /*border: 2px solid red; !* 添加红色边框 *!*/
+    /*border: 2px solid red; !* Add a red border *!*/
 }
 
 .analytics-title {
@@ -22,7 +23,7 @@
 }
 
 
-/* 产品展示模块 */
+/* Product Display Module */
 .cicd-section {
     width: 100%;
     display: flex;
@@ -30,9 +31,9 @@
     justify-content: space-between;
     gap: 40px;
     /*margin-top: 180px;*/
-    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*position: relative; */
     /*top: 50%;*/
-    /*border: 2px solid red; !* 添加红色边框 *!*/
+    /*border: 2px solid red; !* Add a red border *!*/
 }
 
 .cicd-section1 {
@@ -93,11 +94,11 @@ h1 {
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    height: 600px; /* 固定高度 */
-    /*border: 1px solid #ccc; !* 增加边框 *!*/
+    height: 600px; /* Fixed height */
+    /*border: 1px solid #ccc; !* Add border *!*/
     border-radius: 8px;
-    /*background-color: #1e1e1e; !* 让整体背景颜色深色更协调 *!*/
-    overflow: hidden; /* 避免溢出 */
+    /*background-color: #1e1e1e; !* Use a dark background for better coordination *!*/
+    overflow: hidden; /* Prevent overflow */
 }
 
 .code-container-jenkins {
@@ -105,10 +106,9 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    height: 100%; /* 让它填充整个 test-container */
+    height: 100%; /* Fill the entire test-container */
     display: flex;
     flex-direction: column;
-
 }
 
 .test-code-jenkins {
@@ -119,11 +119,9 @@ h1 {
     border-radius: 5px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    max-height: 540px; /* 限制代码区域的高度 */
-    overflow: auto; /* 添加滚动条 */
-
+    max-height: 540px; /* Limit the height of the code area */
+    overflow: auto; /* Add scrollbars */
 }
-
 
 .cicd-description {
     flex: 1;
@@ -133,20 +131,19 @@ h1 {
 }
 
 .cicd-image {
-    width: 360px; /* 设置固定宽度 */
+    width: 360px; /* Set a fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;  !* Adjust left margin of the image *!*/
+    /*margin-right: 20px; !* Adjust right margin of the image *!*/
 }
 
-/* 响应式设计 */
+/* Responsive Design */
 @media (max-width: 768px) {
     .cicd-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Fit on smaller screens */
+        max-width: 300px; /* Limit the maximum width */
     }
 }
-

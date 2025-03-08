@@ -4,7 +4,6 @@ import {NotFound} from "./pages/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Project from "./pages/Project/Project";
-// import Challenges from "./pages/Challenges/Challenges";
 import Regression from "./pages/Test/Regression/Regression";
 import Workflow from "./pages/Test/Workflow/Workflow";
 import Sales from "./pages/Project/Sales/Sales";
@@ -49,11 +48,6 @@ const routes = [
         path: "/Project/Analytics",
         element: <Analytics/>,
     },
-    // {
-    //     path: "/Challenges",
-    //     element: <Challenges />,
-    // },
-
     {
         path: "/Test",
         element: <Workflow/>,
@@ -94,7 +88,7 @@ const routes = [
 
 class App extends React.Component {
     render() {
-        console.log('Rendering App'); // 确保应用程序正在渲染
+        console.log('Rendering App');
         return (
             <BrowserRouter>
                 <Navbar/>

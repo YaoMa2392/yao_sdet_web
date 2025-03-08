@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* Global styles */
 .analytics-showcase {
     width: 100%;
     max-width: 1200px;
@@ -7,7 +7,7 @@
     font-family: "Roboto", Sans-serif;
 }
 
-/* 产品展示模块 */
+/* Product display module */
 .regression-section {
     width: 100%;
     display: flex;
@@ -15,9 +15,9 @@
     justify-content: space-between;
     gap: 40px;
     /*margin-top: 180px;*/
-    /*position: relative; !* 或者 absolute，根据需要 *!*/
+    /*position: relative; */
     /*top: 50%;*/
-    /*border: 2px solid red; !* 添加红色边框 *!*/
+    /*border: 2px solid red; !* Add a red border *!*/
 }
 
 .regression-product-section {
@@ -28,9 +28,6 @@
     margin-top: 80px;
 }
 
-
-
-
 .regression-description {
     flex: 1;
     font-size: 1.2rem;
@@ -38,23 +35,22 @@
     color: #333;
 }
 
-
 .regression-image {
-    width: 600px; /* 设置固定宽度 */
+    width: 600px; /* Set fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     /*margin-top: 10px;*/
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;  !* Adjust the left margin of the image *!*/
+    /*margin-right: 20px; !* Adjust the right margin of the image *!*/
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .regression-image {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Adjust on small screens */
+        max-width: 300px; /* Limit the maximum width */
     }
 }
 
@@ -77,14 +73,14 @@
 .left-images {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* 控制上下间距 */
+    gap: 10px; /* Control vertical spacing */
 }
 
 .regression-image-right {
-    width: 600px; /* 调整大小以适应布局 */
+    width: 600px; /* Adjust size to fit the layout */
     height: auto;
     max-width: 100%;
-    /*max-width: 300px; !* 你可以调整这个值 *!*/
+    /*max-width: 300px;*/
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -123,39 +119,39 @@
 }
 
 .document-image-bugRep {
-    width: 555px; /* 设置固定宽度 */
+    width: 555px; /* Set fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     /*margin-top: 10px;*/
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;  !* Adjust the left margin of the image *!*/
+    /*margin-right: 20px; !* Adjust the right margin of the image *!*/
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .document-image-bugRep {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Adjust on small screens */
+        max-width: 300px; /* Limit the maximum width */
     }
 }
 
 .document-image-rep {
-    width: 476px; /* 设置固定宽度 */
+    width: 476px; /* Set fixed width */
     height: auto;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     /*margin-top: 10px;*/
-    /*margin-left: 200px;  !* 调整图片左边距 *!*/
-    /*margin-right: 20px; !* 调整图片右边距 *!*/
+    /*margin-left: 200px;  !* Adjust the left margin of the image *!*/
+    /*margin-right: 20px; !* Adjust the right margin of the image *!*/
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .document-image-rep {
-        width: 100%; /* 在小屏幕上适应 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 100%; /* Adjust on small screens */
+        max-width: 300px; /* Limit the maximum width */
     }
 }

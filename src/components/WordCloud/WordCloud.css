@@ -1,32 +1,29 @@
-/* src/Project.css */
-
-/* 词云容器的样式 */
+/* Word cloud container style */
 .word-cloud {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* 居中对齐 */
+    justify-content: center; /* Center alignment */
     position: relative;
-    width: 100%; /* 调整为 100% 宽度，确保不会影响页面布局 */
-    max-width: 600px; /* 最大宽度，避免占用太多空间 */
-    height: 50vh; /* 设置更适合的高度 */
+    width: 100%; /* Set width to 100% to ensure it does not affect page layout */
+    max-width: 600px; /* Maximum width to avoid taking up too much space */
+    height: 50vh; /* Set a more suitable height */
     margin-top: 5%;
-    margin-left: auto; /* 居中 */
-    margin-right: auto; /* 居中 */
-    /*border: 2px solid red; !* 添加红色边框 *!*/
+    margin-left: auto; /* Center */
+    margin-right: auto; /* Center */
+    /*border: 2px solid red; /* Add red border */
 }
 
-/* 每个词的基本样式 */
+/* Basic style for each word */
 .word {
     cursor: pointer;
     font-weight: bold;
-    position: absolute; /* 让每个词可以自由漂浮 */
+    position: absolute; /* Allow each word to float freely */
     transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .word.hovered {
-    color: #FF9E00; /* 悬浮时的颜色 */
-    transform: scale(1.7); /* 放大效果 */
-    box-shadow: 0px 0px 30px rgba(255, 158, 0, 0.5); /* 增加阴影 */
-    text-shadow: 0 0 10px rgba(255, 158, 0, 0.8); /* 发光效果 */
+    color: #FF9E00; /* Color on hover */
+    transform: scale(1.7); /* Zoom effect */
+    box-shadow: 0px 0px 30px rgba(255, 158, 0, 0.5); /* Add shadow */
+    text-shadow: 0 0 10px rgba(255, 158, 0, 0.8); /* Glowing effect */
 }
-

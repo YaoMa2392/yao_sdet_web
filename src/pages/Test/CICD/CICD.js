@@ -172,7 +172,7 @@ export default function CICD() {
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
-                className="analytics-showcase"
+                className="cicd-showcase"
             >
 
                 <section className="cicd-section1">

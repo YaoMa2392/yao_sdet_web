@@ -110,7 +110,7 @@ public void testImmBtn() {
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: 1}}
-                className="analytics-showcase"
+                className="regression-showcase"
             >
 
                 <section className="regression-section">
@@ -137,7 +137,7 @@ public void testImmBtn() {
                             </li>
                         </ul>
                         <span>⭐ Download the Test Plan sample designed by Yao Ma </span>
-                        {/* 下载 Word 文件的链接 */}
+                        {/* Download Word */}
                         <motion.a
                             href="/Test Plan for Uptrillion Portal.docx"
                             download="Yao_TestPlanSample.docx"
@@ -272,8 +272,6 @@ public void testImmBtn() {
                 <section className="regression-section7">
                     <ChallengeTable challenges={challenges} />
                 </section>
-
-
             </motion.div>
         </div>
     );
