@@ -46,7 +46,7 @@ const Navbar = () => {
                             <Link to="/Test/Performance">Performance Testing</Link>
                             <Link to="/Test/CICD">CI/CD</Link>
                             <Link to="/Test/Documentation">Documentation</Link>
-                            <Link to="/Test/ARGOTesting">ARGO Testing</Link>
+                            <Link to="/Test/ARGOTesting">ARGO™ HT System Testing</Link>
                         </div>
                     )}
                 </div>
