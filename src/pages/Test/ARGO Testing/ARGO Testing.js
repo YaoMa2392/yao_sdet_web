@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
-import React, {useState} from "react";
+import React from "react";
 import "./ARGO Testing.css";
 import {motion} from "framer-motion";
 import TitleBar from "../../../components/TitleBar/TitleBar";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTimes} from "@fortawesome/free-solid-svg-icons";
 import alamarData from "../../../assets/alamar_data1.png";
 import alamarFunction from "../../../assets/alamar_function.png";
 import alamarManual from "../../../assets/alamar_manual.png";
@@ -16,18 +14,6 @@ import FadeInWords from "../../../components/FadeInWords/FadeInWords";
 
 
 function ARGOTesting() {
-    const [modalOpen, setModalOpen] = useState(false);
-    const [currentImage, setCurrentImage] = useState(null);
-
-    const handleImageClick = (imageSrc) => {
-        setCurrentImage(imageSrc);
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
-    };
-
     const functional = "Functional Testing".split(' ');
     const performance = "Performance Testing".split(' ');
     const recovery = "Recovery Testing".split(' ');
@@ -52,7 +38,6 @@ function ARGOTesting() {
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
-                            onClick={() => handleImageClick(alamarFunction)} // Open modal with this image
                         />
                         <motion.img
                             src={alamarData}
@@ -61,7 +46,6 @@ function ARGOTesting() {
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
-                            onClick={() => handleImageClick(alamarData)} // Open modal with this image
                         />
                     </div>
 
@@ -112,17 +96,6 @@ function ARGOTesting() {
                         transition={{duration: 1, delay: 0.5}}
                     />
                 </section>
-
-
-                {/* Modal for Enlarged Image */}
-                {modalOpen && (
-                    <div className="modal-overlay" onClick={closeModal}>
-                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                            <img src={currentImage} alt="Enlarged view" className="modal-image"/>
-                            <button className="argo-close-btn" onClick={closeModal}><FontAwesomeIcon icon={faTimes}/></button>
-                        </div>
-                    </div>
-                )}
             </motion.div>
         </div>
     );

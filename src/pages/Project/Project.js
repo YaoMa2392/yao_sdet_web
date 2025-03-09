@@ -55,7 +55,7 @@ export default function Project() {
                     transition={{duration: 1, delay: 0.3}}
                     className="hero-subtitle"
                 >
-                    The Cloud Commerce Platform
+                    A Cloud Commerce Platform
                 </motion.p>
                 <motion.img
                     src={cloud} // Use the image filename
