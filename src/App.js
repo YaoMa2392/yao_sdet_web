@@ -77,10 +77,10 @@ const routes = [
         path: "/Test/Documentation",
         element: <Documentation/>,
     },
-    {
-        path: "/Test/ARGOTesting",
-        element: <ARGOTesting/>,
-    },
+    // {
+    //     path: "/Test/ARGOTesting",
+    //     element: <ARGOTesting/>,
+    // },
     {
         path: "/QA",
         element: <QA/>,

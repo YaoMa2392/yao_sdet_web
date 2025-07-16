@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/alamar_logo.webp";
+import logo from "../../assets/yao.png";
 
 const Navbar = () => {
     const [testMenuOpen, setTestMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ const Navbar = () => {
                             <Link to="/Test/Performance">Performance Testing</Link>
                             <Link to="/Test/CICD">CI/CD</Link>
                             <Link to="/Test/Documentation">Documentation</Link>
-                            <Link to="/Test/ARGOTesting">ARGO™ HT System Testing</Link>
+                            {/*<Link to="/Test/ARGOTesting">ARGO™ HT System Testing</Link>*/}
                         </div>
                     )}
                 </div>

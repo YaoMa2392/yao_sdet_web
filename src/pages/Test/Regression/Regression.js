@@ -44,7 +44,7 @@ public void testImmBtn() {
         driver.get(BASE_URL);
 
         // Locate the "Request a Quote" button and click
-        WebElement button = driver.findElement(By.xpath("//a[@href='https://alamarbio.com/contact-us/']//span[contains(text(),'request a Quote')]"));
+        WebElement button = driver.findElement(By.xpath("//a[@href='https://example.com/contact-us/']//span[contains(text(),'request a Quote')]"));
         Assert.assertNotNull(button, "Button Not Found");
         button.click();
 
@@ -53,7 +53,7 @@ public void testImmBtn() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(@class, 'elementor-heading-title') and contains(text(), 'Contact us')]")));
 
         // Verify page title
-        String expectedTitle = "A Silicon Valley Proteomics Startup Company: Alamar Biosciences Inc.";
+        String expectedTitle = "Example Tile";
         String actualTitle = driver.getTitle();
         Assert.assertTrue(actualTitle.contains(expectedTitle), "Quote page title does not match!");
 
@@ -262,7 +262,7 @@ public void testImmBtn() {
 
                 <div className="test-container-jenkins">
                     <div className="code-container-jenkins">
-                        <h2>./alamarAuto</h2>
+                        <h2>./exampleAuto</h2>
                         <pre className="test-code-jenkins">{alamarAuto}</pre>
                     </div>
                 </div>

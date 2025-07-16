@@ -4,20 +4,17 @@ import styled from 'styled-components';
 import FadeInWords from "../../components/FadeInWords/FadeInWords";
 
 
-const words = "Feel free to ask any questions!".split(' ');
-
 const GradientBackground = styled.div`
-  background: linear-gradient(45deg, #1C3775, #FFCE00);
-  height: 100vh;
+  background: linear-gradient(45deg, #1C3775, #7045AF, #977BBF, #713DBA);
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
 `;
 
-
 const QA = () => {
-    const words = "Feel free to ask any questions!".split(' '); // Words as input
+    const words = "Please feel free to contact me!".split(' '); // Words as input
 
     return (
         <GradientBackground>

@@ -1,6 +1,11 @@
 .titlebar {
-    background: linear-gradient(to right, rgba(255, 206, 0, 1) 0%, rgba(255, 206, 0, 0.3) 50%, rgba(255, 206, 0, 1) 100%);
-    padding: 60px 0;
+    background: linear-gradient(
+            to right,
+            rgba(112, 69, 175, 1) 0%,     /* #7045AF */
+            rgba(151, 123, 191, 0.6) 50%, /* #977BBF 半透明 */
+            rgba(113, 61, 186, 1) 100%    /* #713DBA */
+    );
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     opacity: 0;
@@ -33,6 +38,6 @@
     font-size: 4rem;
     font-weight: lighter;
     font-family: "Roboto", Sans-serif;
-    color: #1C3775;
-
+    /*color: 	#BFFF00;*/
+    color: white;
 }
