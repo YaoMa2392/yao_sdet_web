@@ -1,7 +1,7 @@
 {
-  "name": "alamar-prep",
+  "name": "yao_sdet_web",
   "version": "0.1.0",
-  "homepage": "https://yaoma2392.github.io/alamar-pres",
+  "homepage": "https://yaoma2392.github.io/yao_sdet_web",
   "private": true,
   "dependencies": {
     "@ant-design/charts": "^2.2.6",
